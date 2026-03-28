@@ -1,0 +1,55 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+enum TriggerCategory {
+  RELATIONAL
+  WORK_OR_SCHOOL
+  HEALTH
+  UNCERTAINTY
+  OVERSTIMULATION
+  MEMORY_TRIGGER
+  CONFLICT
+  OTHER
+}
+
+model User {
+  id              String          @id @default(cuid())
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+  baselineEntries BaselineEntry[]
+  stressEvents    StressEvent[]
+}
+
+model BaselineEntry {
+  id                String   @id @default(cuid())
+  userId            String
+  user              User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  date              DateTime
+  baselineIntensity Int
+  notes             String?
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  @@unique([userId, date])
+}
+
+model StressEvent {
+  id               String          @id @default(cuid())
+  userId           String
+  user             User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  title            String
+  description      String?
+  stressIncrease   Int
+  currentIntensity Int
+  triggerCategory  TriggerCategory
+  copingUsed       String?
+  enteredAutopilot Boolean         @default(false)
+  createdAt        DateTime        @default(now())
+  updatedAt        DateTime        @updatedAt
+}
