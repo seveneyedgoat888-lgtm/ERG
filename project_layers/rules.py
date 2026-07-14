@@ -7,6 +7,7 @@ They do not diagnose, prescribe, or establish causality.
 from __future__ import annotations
 
 from dataclasses import dataclass
+import re
 
 from .models import ConfidenceLevel, DomainActivation, Intake, ProjectLayerDomain, RuleMatch
 
@@ -29,9 +30,10 @@ RULES: tuple[MappingRule, ...] = (
         ProjectLayerDomain.MEDICAL_PHYSIOLOGICAL,
         ("sleep", "medications", "substance_use", "physical_neurological_symptoms", "recent_medical_changes"),
         (
-            "medication", "dose", "withdrawal", "substance", "alcohol", "cannabis", "sleep", "insomnia",
-            "pain", "fatigue", "head injury", "concussion", "seizure", "neurological", "dizzy", "infection",
-            "hormonal", "endocrine", "metabolic", "physical symptoms", "medical",
+            "medication initiation", "medication withdrawal", "dose change", "dosage change", "withdrawal",
+            "substance use", "intoxication", "increased cannabis", "increased alcohol", "severe sleep loss", "insomnia",
+            "chronic pain", "pain flare", "fatigue", "head injury", "concussion", "seizure", "neurological",
+            "dizzy", "dizziness", "infection", "hormonal", "endocrine", "metabolic", "physical symptoms",
         ),
         "Medical or physiological context may be relevant and should be clarified without assuming causality.",
         (
@@ -167,9 +169,32 @@ RULES: tuple[MappingRule, ...] = (
 )
 
 
+NEGATION_PATTERN = re.compile(
+    r"\b(no|not|none|denies|without|absence of|negative for|no recent|no current|no known)\b",
+    re.IGNORECASE,
+)
+
+
+def _is_negated(text: str, start: int) -> bool:
+    """Return True when a matched term is locally negated or explicitly absent.
+
+    This keeps ambiguous indicators ambiguous and prevents phrases such as
+    "no head injury" from activating medical/referral considerations.
+    """
+
+    prefix = text[max(0, start - 45):start]
+    return bool(NEGATION_PATTERN.search(prefix))
+
+
 def _matched_terms(text: str, terms: tuple[str, ...]) -> list[str]:
     lowered = text.lower()
-    return [term for term in terms if term in lowered]
+    matched: list[str] = []
+    for term in terms:
+        for found in re.finditer(re.escape(term), lowered):
+            if not _is_negated(lowered, found.start()):
+                matched.append(term)
+                break
+    return matched
 
 
 def _confidence(match_count: int, fact_count: int) -> ConfidenceLevel:
