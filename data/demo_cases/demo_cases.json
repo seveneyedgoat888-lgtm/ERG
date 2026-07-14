@@ -1,0 +1,65 @@
+[
+  {
+    "case_id": "demo-001",
+    "title": "Synthetic case: overloaded caregiver",
+    "synthetic": true,
+    "intake": {
+      "presenting_concerns": "Reports feeling overwhelmed, tense, worried, and not able to calm after work and caregiving stress.",
+      "reported_history": "Over the past two years caregiving responsibilities increased, with family conflict and less time for recovery.",
+      "onset_duration": "Gradual onset over months, worse during the last six weeks.",
+      "functional_effects": "Missing deadlines, procrastinating, withdrawing from friends, and feeling overloaded with planning tasks.",
+      "current_stressors": "Ongoing caregiving, financial pressure, high workload, and no break most weeks.",
+      "strengths": "Supportive sibling, values family, motivated for help, and has used walking routines before.",
+      "client_goals": "Wants to feel more steady, rebuild routine, and make decisions without constant worry.",
+      "risk_information": "No imminent safety concern reported in this synthetic case.",
+      "sleep": "Sleeping five hours with frequent waking and feeling fatigued.",
+      "medications": "No recent medication dose change reported.",
+      "substance_use": "Occasional alcohol; no withdrawal concern reported.",
+      "physical_neurological_symptoms": "Chronic pain flare and unexplained fatigue; no acute neurological symptoms reported.",
+      "recent_medical_changes": "Plans to clarify medical history with primary care because fatigue increased recently.",
+      "environmental_factors": "Transportation barriers and financial strain make appointments harder."
+    }
+  },
+  {
+    "case_id": "demo-002",
+    "title": "Synthetic case: sudden sleep and medication change",
+    "synthetic": true,
+    "intake": {
+      "presenting_concerns": "Reports being keyed up, on guard, emotionally intense, and worried something bad will happen.",
+      "reported_history": "Sudden change in functioning after a medication dose change and several nights of severe sleep loss.",
+      "onset_duration": "Abrupt onset during the past week.",
+      "functional_effects": "Difficulty focusing, missed work tasks, checking messages repeatedly, and reassurance seeking.",
+      "current_stressors": "Work conflict and uncertainty about job performance.",
+      "strengths": "Insightful, supportive partner, and willing to coordinate with healthcare providers.",
+      "client_goals": "Wants to understand what needs urgent clarification and regain stable sleep.",
+      "risk_information": "Synthetic scenario includes concern about acute confusion at night but no imminent self-harm intent reported.",
+      "sleep": "Severe sleep loss with only two hours per night for several nights.",
+      "medications": "Recent medication initiation and dosage change; wants to clarify medical history with prescriber.",
+      "substance_use": "Increased cannabis use for sleep; no conclusion about intoxication or withdrawal.",
+      "physical_neurological_symptoms": "Dizziness and brief confusion reported; no diagnosis is made by this tool.",
+      "recent_medical_changes": "Medication initiation, dosage change, and sudden functioning change this week.",
+      "environmental_factors": "Job stress and limited sick leave."
+    }
+  },
+  {
+    "case_id": "demo-003",
+    "title": "Synthetic case: transition and avoidance",
+    "synthetic": true,
+    "intake": {
+      "presenting_concerns": "Reports feeling lost, not like myself, ashamed, and avoiding applications after a role transition.",
+      "reported_history": "After relocation and relationship breakup, worries about rejection and failure became stronger.",
+      "onset_duration": "Started three months ago after moving; fluctuates by social contact and routine.",
+      "functional_effects": "Avoids networking, cancels plans, stopped exercise routine, and struggles to start tasks.",
+      "current_stressors": "Housing uncertainty, new job search, isolation, and transportation access problems.",
+      "strengths": "Creative, values community, prior routine helped, and a friend offers support.",
+      "client_goals": "Wants to reconnect with identity, community, and valued action.",
+      "risk_information": "No imminent safety concern reported in this synthetic case.",
+      "sleep": "Variable sleep but no severe or prolonged sleep loss reported.",
+      "medications": "No medication initiation, withdrawal, or dosage changes reported.",
+      "substance_use": "No substance use concern reported.",
+      "physical_neurological_symptoms": "No head injury, seizure-like events, or neurological symptoms reported.",
+      "recent_medical_changes": "No recent medical changes reported.",
+      "environmental_factors": "Housing uncertainty, transportation barriers, and limited local support."
+    }
+  }
+]
