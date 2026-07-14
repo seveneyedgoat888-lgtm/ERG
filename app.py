@@ -6,6 +6,8 @@ import streamlit as st
 
 from project_layers.demo_data import load_demo_cases
 from project_layers.models import Intake
+from project_layers.interventions import SCORING_FACTORS, match_interventions
+from project_layers.models import ProjectLayerDomain
 from project_layers.rules import draft_formulation, map_intake_to_domains, medical_considerations
 
 st.set_page_config(page_title="Project Layers Prototype", layout="wide")
@@ -87,4 +89,142 @@ st.header("4. Editable provisional formulation")
 formulation = draft_formulation(intake, activations)
 st.text_area("Clinician-editable draft", value=formulation, height=220)
 
-st.info("Treatment recommendations are intentionally not implemented in this vertical slice.")
+st.info("The prototype provides transparent candidate-approach matching only; final treatment recommendations require clinician decision.")
+
+
+def _first_fact_for(domain: ProjectLayerDomain, fallback: str) -> str:
+    activation = next((item for item in activations if item.domain == domain), None)
+    if activation and activation.reported_facts:
+        return activation.reported_facts[0]
+    return f"Hypothesis: {fallback}"
+
+
+st.header("5. Working formulation and maintaining cycle")
+st.subheader("Working formulation")
+st.write(formulation)
+st.subheader("Primary systems")
+if activations:
+    st.write(", ".join(activation.domain.value for activation in activations[:5]))
+else:
+    st.write("Hypothesis: no primary systems selected yet; add or edit intake facts.")
+
+st.subheader("Maintaining cycle")
+cycle_defaults = {
+    "Trigger": _first_fact_for(ProjectLayerDomain.ALLOSTATIC_LOAD, "identify a trigger or contextual stressor"),
+    "Nervous-system activation": _first_fact_for(ProjectLayerDomain.NERVOUS_SYSTEM, "clarify arousal, shutdown, or recovery pattern"),
+    "Salience": _first_fact_for(ProjectLayerDomain.SALIENCE_THREAT, "clarify what becomes salient or threatening"),
+    "Interpretive prism": _first_fact_for(ProjectLayerDomain.INTERPRETIVE_SCHEMAS, "clarify interpretive schema or expectation"),
+    "Assigned meaning": _first_fact_for(ProjectLayerDomain.MEANING_COGNITION, "clarify meaning, appraisal, or value conflict"),
+    "Emotion and cognition": _first_fact_for(ProjectLayerDomain.EMOTION_REGULATION, "clarify emotion and cognition pattern"),
+    "Behavior": _first_fact_for(ProjectLayerDomain.BEHAVIORAL_REINFORCEMENT, "clarify behavior, avoidance, or reinforcement loop"),
+    "Relational or environmental consequence": _first_fact_for(ProjectLayerDomain.ATTACHMENT_RELATIONAL, "clarify relational or environmental consequence"),
+    "Reinforcement": "Hypothesis: clarify the short-term relief, reward, cost, or feedback that may reinforce the loop.",
+}
+cycle_nodes = {}
+for label, default in cycle_defaults.items():
+    cycle_nodes[label] = st.text_input(label, value=default, key=f"cycle_node_{selected_case.case_id}_{label}")
+st.markdown(" → ".join(f"**{label}:** {value}" for label, value in cycle_nodes.items()))
+
+st.subheader("Missing information")
+missing_questions = [question for activation in activations for question in activation.missing_clarification_questions]
+for question in missing_questions or ["Hypothesis: add intake details to identify missing clarification questions."]:
+    st.write(f"- {question}")
+
+st.subheader("Medical considerations")
+for item in medical_considerations(activations):
+    st.write(f"- {item}")
+
+st.subheader("Initial treatment priorities")
+st.write(
+    "Prototype priorities: clarify missing information, address safety and medical/referral considerations, "
+    "confirm readiness and feasibility, and use clinician judgment before selecting any approach."
+)
+
+st.header("6. Candidate approaches for clinician decision")
+st.caption("Transparent matching only. Approaches with missing prerequisites are not recommended; missing prerequisites are displayed instead.")
+
+with st.form("recommendation_context"):
+    treatment_stage = st.selectbox("Treatment stage", ["Stabilization", "Formulation", "Engagement", "Skills-building", "Action planning"])
+    readiness_confirmed = st.checkbox("Readiness confirmed")
+    safety_review_completed = st.checkbox("Safety and stabilization reviewed")
+    medical_considerations_reviewed = st.checkbox("Medical/referral considerations reviewed")
+    feasibility_confirmed = st.checkbox("Feasibility confirmed")
+    environmental_barriers_addressed = st.checkbox("Environmental barriers addressed or planned for")
+    clinician_scope_confirmed = st.checkbox("Clinician setting and scope confirmed")
+    preferred = st.multiselect(
+        "Client preference, if stated",
+        [
+            "DBT-informed interventions",
+            "Mentalization-Based Treatment",
+            "CBT",
+            "ACT",
+            "Behavioral Activation",
+            "Motivational Interviewing",
+            "Attachment-informed therapy",
+            "Trauma-informed stabilization",
+            "Family or systemic approaches",
+            "Case-management and environmental interventions",
+            "Medical consultation or referral",
+        ],
+    )
+    st.form_submit_button("Update candidate approach matching")
+
+recommendation_context = {
+    "treatment_stage": treatment_stage,
+    "readiness_confirmed": readiness_confirmed,
+    "safety_review_completed": safety_review_completed,
+    "medical_considerations_reviewed": medical_considerations_reviewed,
+    "feasibility_confirmed": feasibility_confirmed,
+    "environmental_barriers_addressed": environmental_barriers_addressed,
+    "clinician_scope_confirmed": clinician_scope_confirmed,
+    "client_preferred_approaches": preferred,
+}
+candidates = match_interventions(intake, activations, recommendation_context)
+
+if "recommendation_decisions" not in st.session_state:
+    st.session_state.recommendation_decisions = {}
+
+for candidate in candidates:
+    title = f"{candidate['approach_name']} — {candidate['status']} — score {candidate['total_score']}"
+    with st.expander(title):
+        if candidate["missing_prerequisites"]:
+            st.error("Missing prerequisites — not recommended yet.")
+            for missing in candidate["missing_prerequisites"]:
+                st.write(f"- {missing}")
+        st.markdown("**Why this approach matched**")
+        st.write(candidate["why_matched"])
+        st.markdown("**Complete scoring breakdown**")
+        for factor in SCORING_FACTORS:
+            detail = candidate["scoring_breakdown"][factor]
+            st.write(f"- {factor}: {detail['points']} point(s); details: {detail['details']}")
+        st.markdown("**Example in-session applications**")
+        for item in candidate["intervention"]["example_questions"]:
+            st.write(f"- {item}")
+        st.markdown("**Between-session options**")
+        for item in candidate["intervention"]["example_exercises"]:
+            st.write(f"- {item}")
+        st.markdown("**Cautions**")
+        for item in candidate["intervention"]["cautions"]:
+            st.write(f"- {item}")
+        for item in candidate["intervention"]["contraindication_or_referral_considerations"]:
+            st.write(f"- Referral/scope consideration: {item}")
+        st.markdown("**Clinician decision**")
+        decision_key = f"decision_{selected_case.case_id}_{candidate['approach_name']}"
+        rationale_key = f"rationale_{selected_case.case_id}_{candidate['approach_name']}"
+        decision = st.radio(
+            "Decision",
+            ["needs more information", "accepted", "modified", "declined"],
+            key=decision_key,
+            horizontal=True,
+        )
+        rationale = st.text_area("Clinician rationale for this prototype session", key=rationale_key)
+        st.session_state.recommendation_decisions[candidate["approach_name"]] = {
+            "decision": decision,
+            "rationale": rationale,
+        }
+
+undecided = [name for name, value in st.session_state.recommendation_decisions.items() if not value.get("decision")]
+if undecided:
+    st.warning("Every candidate approach requires a clinician decision before prototype session review is complete.")
+else:
+    st.success("Clinician decisions are stored in Streamlit session state for this prototype session.")
