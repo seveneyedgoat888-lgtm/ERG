@@ -1,200 +1,1994 @@
 [
   {
-    "approach_name": "DBT-informed interventions",
-    "description": "Placeholder entry for skills-oriented support with emotion regulation, distress tolerance, mindfulness, and interpersonal effectiveness elements when clinically appropriate.",
-    "target_domains": ["Emotion regulation", "Nervous-system regulation", "Behavioral reinforcement and avoidance", "Attachment and relational functioning"],
-    "target_processes": ["emotion identification", "distress tolerance", "impulse pause", "interpersonal repair"],
-    "treatment_stage": "Stabilization and skills-building; not a diagnosis-specific recommendation.",
-    "client_goals": ["increase coping options", "reduce escalation costs", "improve communication under stress"],
-    "prerequisites": ["clinician confirms fit", "safety and medical/referral considerations reviewed", "client can collaborate on skills practice"],
-    "application_guidance": "Use only as clinician-reviewed skills support linked to the source facts and activated domains.",
-    "example_questions": ["Which moments would benefit from a pause skill?", "What signals show that emotion intensity is rising?"],
-    "example_exercises": ["emotion intensity tracking", "distress-tolerance menu", "interpersonal effectiveness rehearsal"],
-    "cautions": ["Do not use skills language to invalidate realistic distress or unsafe conditions."],
-    "contraindication_or_referral_considerations": ["Address imminent safety, acute confusion, severe sleep loss, substance withdrawal, or medical instability first as clinically indicated."],
-    "setting_limitations": ["Prototype placeholder; not a comprehensive DBT program."],
-    "clinician_scope_notes": "Use within clinician competence and supervision requirements.",
-    "evidence_source_placeholder": "Evidence/source field intentionally pending human clinical review; no citation invented.",
+    "approach_name": "DBT-informed skills",
+    "description": "Placeholder entry for DBT-informed skills; pending qualified clinical review and not a diagnosis-specific recommendation.",
+    "target_domains": [
+      "Emotion regulation",
+      "Nervous-system regulation",
+      "Behavioral reinforcement and avoidance"
+    ],
+    "target_processes": [
+      "emotion",
+      "distress tolerance",
+      "grounding",
+      "skills"
+    ],
+    "treatment_stage": "Stabilization and skills-building",
+    "client_goals": [
+      "increase coping options",
+      "clarify priorities",
+      "reduce avoidant costs",
+      "coordinate safe care",
+      "reconnect with values"
+    ],
+    "universal_review_gates": [
+      {
+        "id": "informed_choice",
+        "label": "Client preference and informed choice have been discussed",
+        "required_evidence_source": "client preference",
+        "hard_prerequisite": false,
+        "clarification_questions": [
+          "What options, preferences, concerns, or declines has the client expressed?"
+        ]
+      },
+      {
+        "id": "safety_review",
+        "label": "Acute safety concerns and established clinical procedures have been reviewed without declaring safety status",
+        "required_evidence_source": "clinician confirmation",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "Are there acute safety concerns requiring established clinical procedures before approach selection?"
+        ]
+      },
+      {
+        "id": "medical_review",
+        "label": "Medical/referral considerations have been considered as potentially concurrent, not only after psychological explanations fail",
+        "required_evidence_source": "clinician confirmation",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "Are medical, medication, sleep, substance, pain, neurological, or referral considerations relevant now?"
+        ]
+      },
+      {
+        "id": "scope_setting_resources",
+        "label": "Clinician competence, supervision, setting, and resource availability fit this approach",
+        "required_evidence_source": "clinician confirmation",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "Is this approach within competence, supervision, setting, and available resources?"
+        ]
+      }
+    ],
+    "approach_specific_prerequisites": [
+      {
+        "id": "collaborative_goal",
+        "label": "A collaborative target or purpose for this approach is identified",
+        "required_evidence_source": "intake fact",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "What specific target, purpose, or goal would this approach address?"
+        ]
+      }
+    ],
+    "conditional_considerations": [
+      {
+        "id": "client_preference_visibility",
+        "label": "Client preference, informed choice, culture, and feasibility should remain visible in the plan.",
+        "evidence_sources": [
+          "client preference",
+          "clinician confirmation"
+        ],
+        "clarification_questions": [
+          "How does the client describe preference, fit, culture, feasibility, or concerns?"
+        ]
+      },
+      {
+        "id": "coexisting_medical_psychological",
+        "label": "Medical and psychological contributors may coexist and should be considered concurrently.",
+        "evidence_sources": [
+          "domain activation",
+          "intake fact"
+        ],
+        "clarification_questions": [
+          "What medical and psychological/contextual contributors should be tracked side by side?"
+        ]
+      }
+    ],
+    "priority_shifting_or_referral_conditions": [
+      {
+        "id": "acute_safety_priority",
+        "label": "Acute safety concerns require established clinical procedures before ordinary approach selection; the app must not declare the person safe or unsafe.",
+        "status_if_present": "defer_while_priority_needs_are_addressed",
+        "evidence_sources": [
+          "clinician confirmation",
+          "intake fact"
+        ],
+        "clarification_questions": [
+          "Do current risk details require established clinical procedures now?"
+        ]
+      },
+      {
+        "id": "urgent_medical_priority",
+        "label": "Urgent medical/referral concerns may require consultation, referral, or emergency procedures concurrent with or before psychosocial work.",
+        "status_if_present": "consultation_or_referral_required",
+        "evidence_sources": [
+          "domain activation",
+          "clinician confirmation",
+          "intake fact"
+        ],
+        "clarification_questions": [
+          "Are urgent medical, neurological, medication, substance, or severe sleep concerns present?"
+        ]
+      }
+    ],
+    "scope_or_setting_requirements": [
+      "Use within documented competence, supervision, role, setting, and resource availability.",
+      "Do not treat this placeholder as a full protocol or as authorization for out-of-scope care."
+    ],
+    "application_guidance": "Use only as clinician-reviewed decision support linked to source facts, domain activations, confirmations, and client preference.",
+    "example_questions": [
+      "What evidence supports considering this approach now?",
+      "What information is still missing before deciding?"
+    ],
+    "example_exercises": [
+      "collaborative option review",
+      "source-fact-linked plan draft"
+    ],
+    "cautions": [
+      "Do not diagnose, prescribe, infer causality, or treat missing information as a contraindication by itself."
+    ],
+    "contraindication_or_referral_considerations": [
+      "Priority-shifting conditions should trigger clinician review, consultation, referral, or established procedures as clinically indicated."
+    ],
+    "setting_limitations": [
+      "Prototype placeholder; qualified clinical review pending."
+    ],
+    "clinician_scope_notes": "Use within clinician competence, supervision, setting, and resource limits.",
+    "evidence_source_placeholder": "Evidence/source field intentionally pending qualified clinical review; no citation invented.",
+    "clinical_review_status": "pending qualified clinical review",
     "clinician_review_required": true
   },
   {
-    "approach_name": "Mentalization-Based Treatment",
-    "description": "Placeholder entry for supporting curiosity about self/other mental states in relational or attachment-linked cycles.",
-    "target_domains": ["Attachment and relational functioning", "Interpretive prism and schemas", "Meaning and cognition", "Emotion regulation"],
-    "target_processes": ["mental-state reflection", "relational interpretation", "rupture and repair", "affect and perspective taking"],
-    "treatment_stage": "Formulation, relational reflection, and stabilization as appropriate.",
-    "client_goals": ["understand relationship patterns", "increase reflective pause", "reduce certainty about unverified interpretations"],
-    "prerequisites": ["clinician assesses readiness", "current relational safety considered", "medical/referral concerns reviewed"],
-    "application_guidance": "Frame interpretations tentatively and maintain curiosity rather than certainty.",
-    "example_questions": ["What else might have been happening in that person's mind?", "What was happening in your mind at that moment?"],
-    "example_exercises": ["pause-and-wonder practice", "relationship sequence mapping"],
-    "cautions": ["Do not imply that realistic mistreatment is merely a misinterpretation."],
-    "contraindication_or_referral_considerations": ["Use caution with acute instability, coercive relationships, or unresolved safety threats."],
-    "setting_limitations": ["Placeholder only; does not represent a full MBT protocol."],
-    "clinician_scope_notes": "Requires clinician competence with mentalization-informed practice.",
-    "evidence_source_placeholder": "Evidence/source field intentionally pending human clinical review; no citation invented.",
+    "approach_name": "Comprehensive DBT",
+    "description": "Placeholder entry for Comprehensive DBT; pending qualified clinical review and not a diagnosis-specific recommendation.",
+    "target_domains": [
+      "Emotion regulation",
+      "Behavioral reinforcement and avoidance",
+      "Attachment and relational functioning"
+    ],
+    "target_processes": [
+      "emotion",
+      "self-harm",
+      "skills generalization",
+      "phone coaching"
+    ],
+    "treatment_stage": "Comprehensive program",
+    "client_goals": [
+      "increase coping options",
+      "clarify priorities",
+      "reduce avoidant costs",
+      "coordinate safe care",
+      "reconnect with values"
+    ],
+    "universal_review_gates": [
+      {
+        "id": "informed_choice",
+        "label": "Client preference and informed choice have been discussed",
+        "required_evidence_source": "client preference",
+        "hard_prerequisite": false,
+        "clarification_questions": [
+          "What options, preferences, concerns, or declines has the client expressed?"
+        ]
+      },
+      {
+        "id": "safety_review",
+        "label": "Acute safety concerns and established clinical procedures have been reviewed without declaring safety status",
+        "required_evidence_source": "clinician confirmation",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "Are there acute safety concerns requiring established clinical procedures before approach selection?"
+        ]
+      },
+      {
+        "id": "medical_review",
+        "label": "Medical/referral considerations have been considered as potentially concurrent, not only after psychological explanations fail",
+        "required_evidence_source": "clinician confirmation",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "Are medical, medication, sleep, substance, pain, neurological, or referral considerations relevant now?"
+        ]
+      },
+      {
+        "id": "scope_setting_resources",
+        "label": "Clinician competence, supervision, setting, and resource availability fit this approach",
+        "required_evidence_source": "clinician confirmation",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "Is this approach within competence, supervision, setting, and available resources?"
+        ]
+      }
+    ],
+    "approach_specific_prerequisites": [
+      {
+        "id": "collaborative_goal",
+        "label": "A collaborative target or purpose for this approach is identified",
+        "required_evidence_source": "intake fact",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "What specific target, purpose, or goal would this approach address?"
+        ]
+      },
+      {
+        "id": "comprehensive_dbt_available",
+        "label": "A comprehensive DBT program/team structure is available; DBT-informed skills alone are not equivalent",
+        "required_evidence_source": "clinician confirmation",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "Is a comprehensive DBT program/team structure actually available in this setting?"
+        ]
+      }
+    ],
+    "conditional_considerations": [
+      {
+        "id": "client_preference_visibility",
+        "label": "Client preference, informed choice, culture, and feasibility should remain visible in the plan.",
+        "evidence_sources": [
+          "client preference",
+          "clinician confirmation"
+        ],
+        "clarification_questions": [
+          "How does the client describe preference, fit, culture, feasibility, or concerns?"
+        ]
+      },
+      {
+        "id": "coexisting_medical_psychological",
+        "label": "Medical and psychological contributors may coexist and should be considered concurrently.",
+        "evidence_sources": [
+          "domain activation",
+          "intake fact"
+        ],
+        "clarification_questions": [
+          "What medical and psychological/contextual contributors should be tracked side by side?"
+        ]
+      }
+    ],
+    "priority_shifting_or_referral_conditions": [
+      {
+        "id": "acute_safety_priority",
+        "label": "Acute safety concerns require established clinical procedures before ordinary approach selection; the app must not declare the person safe or unsafe.",
+        "status_if_present": "defer_while_priority_needs_are_addressed",
+        "evidence_sources": [
+          "clinician confirmation",
+          "intake fact"
+        ],
+        "clarification_questions": [
+          "Do current risk details require established clinical procedures now?"
+        ]
+      },
+      {
+        "id": "urgent_medical_priority",
+        "label": "Urgent medical/referral concerns may require consultation, referral, or emergency procedures concurrent with or before psychosocial work.",
+        "status_if_present": "consultation_or_referral_required",
+        "evidence_sources": [
+          "domain activation",
+          "clinician confirmation",
+          "intake fact"
+        ],
+        "clarification_questions": [
+          "Are urgent medical, neurological, medication, substance, or severe sleep concerns present?"
+        ]
+      }
+    ],
+    "scope_or_setting_requirements": [
+      "Use within documented competence, supervision, role, setting, and resource availability.",
+      "Do not treat this placeholder as a full protocol or as authorization for out-of-scope care."
+    ],
+    "application_guidance": "Use only as clinician-reviewed decision support linked to source facts, domain activations, confirmations, and client preference.",
+    "example_questions": [
+      "What evidence supports considering this approach now?",
+      "What information is still missing before deciding?"
+    ],
+    "example_exercises": [
+      "collaborative option review",
+      "source-fact-linked plan draft"
+    ],
+    "cautions": [
+      "Do not diagnose, prescribe, infer causality, or treat missing information as a contraindication by itself."
+    ],
+    "contraindication_or_referral_considerations": [
+      "Priority-shifting conditions should trigger clinician review, consultation, referral, or established procedures as clinically indicated."
+    ],
+    "setting_limitations": [
+      "Prototype placeholder; qualified clinical review pending."
+    ],
+    "clinician_scope_notes": "Use within clinician competence, supervision, setting, and resource limits.",
+    "evidence_source_placeholder": "Evidence/source field intentionally pending qualified clinical review; no citation invented.",
+    "clinical_review_status": "pending qualified clinical review",
+    "clinician_review_required": true
+  },
+  {
+    "approach_name": "Mentalization-Based Treatment or MBT-informed work",
+    "description": "Placeholder entry for Mentalization-Based Treatment or MBT-informed work; pending qualified clinical review and not a diagnosis-specific recommendation.",
+    "target_domains": [
+      "Attachment and relational functioning",
+      "Interpretive prism and schemas",
+      "Meaning and cognition",
+      "Emotion regulation"
+    ],
+    "target_processes": [
+      "mental-state reflection",
+      "relational interpretation",
+      "rupture repair"
+    ],
+    "treatment_stage": "Formulation and relational reflection",
+    "client_goals": [
+      "increase coping options",
+      "clarify priorities",
+      "reduce avoidant costs",
+      "coordinate safe care",
+      "reconnect with values"
+    ],
+    "universal_review_gates": [
+      {
+        "id": "informed_choice",
+        "label": "Client preference and informed choice have been discussed",
+        "required_evidence_source": "client preference",
+        "hard_prerequisite": false,
+        "clarification_questions": [
+          "What options, preferences, concerns, or declines has the client expressed?"
+        ]
+      },
+      {
+        "id": "safety_review",
+        "label": "Acute safety concerns and established clinical procedures have been reviewed without declaring safety status",
+        "required_evidence_source": "clinician confirmation",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "Are there acute safety concerns requiring established clinical procedures before approach selection?"
+        ]
+      },
+      {
+        "id": "medical_review",
+        "label": "Medical/referral considerations have been considered as potentially concurrent, not only after psychological explanations fail",
+        "required_evidence_source": "clinician confirmation",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "Are medical, medication, sleep, substance, pain, neurological, or referral considerations relevant now?"
+        ]
+      },
+      {
+        "id": "scope_setting_resources",
+        "label": "Clinician competence, supervision, setting, and resource availability fit this approach",
+        "required_evidence_source": "clinician confirmation",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "Is this approach within competence, supervision, setting, and available resources?"
+        ]
+      }
+    ],
+    "approach_specific_prerequisites": [
+      {
+        "id": "collaborative_goal",
+        "label": "A collaborative target or purpose for this approach is identified",
+        "required_evidence_source": "intake fact",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "What specific target, purpose, or goal would this approach address?"
+        ]
+      }
+    ],
+    "conditional_considerations": [
+      {
+        "id": "client_preference_visibility",
+        "label": "Client preference, informed choice, culture, and feasibility should remain visible in the plan.",
+        "evidence_sources": [
+          "client preference",
+          "clinician confirmation"
+        ],
+        "clarification_questions": [
+          "How does the client describe preference, fit, culture, feasibility, or concerns?"
+        ]
+      },
+      {
+        "id": "coexisting_medical_psychological",
+        "label": "Medical and psychological contributors may coexist and should be considered concurrently.",
+        "evidence_sources": [
+          "domain activation",
+          "intake fact"
+        ],
+        "clarification_questions": [
+          "What medical and psychological/contextual contributors should be tracked side by side?"
+        ]
+      }
+    ],
+    "priority_shifting_or_referral_conditions": [
+      {
+        "id": "acute_safety_priority",
+        "label": "Acute safety concerns require established clinical procedures before ordinary approach selection; the app must not declare the person safe or unsafe.",
+        "status_if_present": "defer_while_priority_needs_are_addressed",
+        "evidence_sources": [
+          "clinician confirmation",
+          "intake fact"
+        ],
+        "clarification_questions": [
+          "Do current risk details require established clinical procedures now?"
+        ]
+      },
+      {
+        "id": "urgent_medical_priority",
+        "label": "Urgent medical/referral concerns may require consultation, referral, or emergency procedures concurrent with or before psychosocial work.",
+        "status_if_present": "consultation_or_referral_required",
+        "evidence_sources": [
+          "domain activation",
+          "clinician confirmation",
+          "intake fact"
+        ],
+        "clarification_questions": [
+          "Are urgent medical, neurological, medication, substance, or severe sleep concerns present?"
+        ]
+      }
+    ],
+    "scope_or_setting_requirements": [
+      "Use within documented competence, supervision, role, setting, and resource availability.",
+      "Do not treat this placeholder as a full protocol or as authorization for out-of-scope care."
+    ],
+    "application_guidance": "Use only as clinician-reviewed decision support linked to source facts, domain activations, confirmations, and client preference.",
+    "example_questions": [
+      "What evidence supports considering this approach now?",
+      "What information is still missing before deciding?"
+    ],
+    "example_exercises": [
+      "collaborative option review",
+      "source-fact-linked plan draft"
+    ],
+    "cautions": [
+      "Do not diagnose, prescribe, infer causality, or treat missing information as a contraindication by itself."
+    ],
+    "contraindication_or_referral_considerations": [
+      "Priority-shifting conditions should trigger clinician review, consultation, referral, or established procedures as clinically indicated."
+    ],
+    "setting_limitations": [
+      "Prototype placeholder; qualified clinical review pending."
+    ],
+    "clinician_scope_notes": "Use within clinician competence, supervision, setting, and resource limits.",
+    "evidence_source_placeholder": "Evidence/source field intentionally pending qualified clinical review; no citation invented.",
+    "clinical_review_status": "pending qualified clinical review",
     "clinician_review_required": true
   },
   {
     "approach_name": "CBT",
-    "description": "Placeholder entry for examining links among situations, thoughts, emotions, body responses, and behaviors.",
-    "target_domains": ["Meaning and cognition", "Interpretive prism and schemas", "Behavioral reinforcement and avoidance", "Executive functioning"],
-    "target_processes": ["appraisal review", "behavioral experiments", "problem solving", "skills practice"],
-    "treatment_stage": "Collaborative formulation and structured skills practice after safety review.",
-    "client_goals": ["increase cognitive flexibility", "test predictions", "improve task follow-through"],
-    "prerequisites": ["client consent for structured review", "clinician confirms thoughts are not being used to minimize real harm"],
-    "application_guidance": "Tie cognitive and behavioral work to specific source facts and alternative explanations.",
-    "example_questions": ["What evidence fits and does not fit this thought?", "What small experiment could test this prediction safely?"],
-    "example_exercises": ["thought record", "activity/problem-solving plan", "behavioral experiment worksheet"],
-    "cautions": ["Do not overfocus on thoughts when environmental, medical, or safety needs are primary."],
-    "contraindication_or_referral_considerations": ["Clarify acute confusion, cognitive decline, medical instability, or unsafe environments before assigning cognitive tasks."],
-    "setting_limitations": ["Placeholder only; not a full CBT protocol."],
-    "clinician_scope_notes": "Use within clinician training and scope.",
-    "evidence_source_placeholder": "Evidence/source field intentionally pending human clinical review; no citation invented.",
+    "description": "Placeholder entry for CBT; pending qualified clinical review and not a diagnosis-specific recommendation.",
+    "target_domains": [
+      "Meaning and cognition",
+      "Interpretive prism and schemas",
+      "Behavioral reinforcement and avoidance",
+      "Executive functioning"
+    ],
+    "target_processes": [
+      "appraisal",
+      "behavioral experiments",
+      "problem solving"
+    ],
+    "treatment_stage": "Collaborative formulation and skills practice",
+    "client_goals": [
+      "increase coping options",
+      "clarify priorities",
+      "reduce avoidant costs",
+      "coordinate safe care",
+      "reconnect with values"
+    ],
+    "universal_review_gates": [
+      {
+        "id": "informed_choice",
+        "label": "Client preference and informed choice have been discussed",
+        "required_evidence_source": "client preference",
+        "hard_prerequisite": false,
+        "clarification_questions": [
+          "What options, preferences, concerns, or declines has the client expressed?"
+        ]
+      },
+      {
+        "id": "safety_review",
+        "label": "Acute safety concerns and established clinical procedures have been reviewed without declaring safety status",
+        "required_evidence_source": "clinician confirmation",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "Are there acute safety concerns requiring established clinical procedures before approach selection?"
+        ]
+      },
+      {
+        "id": "medical_review",
+        "label": "Medical/referral considerations have been considered as potentially concurrent, not only after psychological explanations fail",
+        "required_evidence_source": "clinician confirmation",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "Are medical, medication, sleep, substance, pain, neurological, or referral considerations relevant now?"
+        ]
+      },
+      {
+        "id": "scope_setting_resources",
+        "label": "Clinician competence, supervision, setting, and resource availability fit this approach",
+        "required_evidence_source": "clinician confirmation",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "Is this approach within competence, supervision, setting, and available resources?"
+        ]
+      }
+    ],
+    "approach_specific_prerequisites": [
+      {
+        "id": "collaborative_goal",
+        "label": "A collaborative target or purpose for this approach is identified",
+        "required_evidence_source": "intake fact",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "What specific target, purpose, or goal would this approach address?"
+        ]
+      }
+    ],
+    "conditional_considerations": [
+      {
+        "id": "client_preference_visibility",
+        "label": "Client preference, informed choice, culture, and feasibility should remain visible in the plan.",
+        "evidence_sources": [
+          "client preference",
+          "clinician confirmation"
+        ],
+        "clarification_questions": [
+          "How does the client describe preference, fit, culture, feasibility, or concerns?"
+        ]
+      },
+      {
+        "id": "coexisting_medical_psychological",
+        "label": "Medical and psychological contributors may coexist and should be considered concurrently.",
+        "evidence_sources": [
+          "domain activation",
+          "intake fact"
+        ],
+        "clarification_questions": [
+          "What medical and psychological/contextual contributors should be tracked side by side?"
+        ]
+      }
+    ],
+    "priority_shifting_or_referral_conditions": [
+      {
+        "id": "acute_safety_priority",
+        "label": "Acute safety concerns require established clinical procedures before ordinary approach selection; the app must not declare the person safe or unsafe.",
+        "status_if_present": "defer_while_priority_needs_are_addressed",
+        "evidence_sources": [
+          "clinician confirmation",
+          "intake fact"
+        ],
+        "clarification_questions": [
+          "Do current risk details require established clinical procedures now?"
+        ]
+      },
+      {
+        "id": "urgent_medical_priority",
+        "label": "Urgent medical/referral concerns may require consultation, referral, or emergency procedures concurrent with or before psychosocial work.",
+        "status_if_present": "consultation_or_referral_required",
+        "evidence_sources": [
+          "domain activation",
+          "clinician confirmation",
+          "intake fact"
+        ],
+        "clarification_questions": [
+          "Are urgent medical, neurological, medication, substance, or severe sleep concerns present?"
+        ]
+      }
+    ],
+    "scope_or_setting_requirements": [
+      "Use within documented competence, supervision, role, setting, and resource availability.",
+      "Do not treat this placeholder as a full protocol or as authorization for out-of-scope care."
+    ],
+    "application_guidance": "Use only as clinician-reviewed decision support linked to source facts, domain activations, confirmations, and client preference.",
+    "example_questions": [
+      "What evidence supports considering this approach now?",
+      "What information is still missing before deciding?"
+    ],
+    "example_exercises": [
+      "collaborative option review",
+      "source-fact-linked plan draft"
+    ],
+    "cautions": [
+      "Do not diagnose, prescribe, infer causality, or treat missing information as a contraindication by itself."
+    ],
+    "contraindication_or_referral_considerations": [
+      "Priority-shifting conditions should trigger clinician review, consultation, referral, or established procedures as clinically indicated."
+    ],
+    "setting_limitations": [
+      "Prototype placeholder; qualified clinical review pending."
+    ],
+    "clinician_scope_notes": "Use within clinician competence, supervision, setting, and resource limits.",
+    "evidence_source_placeholder": "Evidence/source field intentionally pending qualified clinical review; no citation invented.",
+    "clinical_review_status": "pending qualified clinical review",
     "clinician_review_required": true
   },
   {
     "approach_name": "ACT",
-    "description": "Placeholder entry for values clarification, acceptance, cognitive defusion, present-moment awareness, and committed action.",
-    "target_domains": ["Meaning and cognition", "Identity and self-continuity", "Behavioral reinforcement and avoidance", "Strengths and protective factors"],
-    "target_processes": ["values clarification", "defusion", "willingness", "committed action"],
-    "treatment_stage": "Formulation and values-based action planning after safety and stabilization needs are reviewed.",
-    "client_goals": ["reconnect with values", "reduce struggle with internal experiences", "take workable next steps"],
-    "prerequisites": ["clinician confirms values work is not bypassing safety, grief, or practical needs"],
-    "application_guidance": "Use values language collaboratively and tentatively.",
-    "example_questions": ["What matters enough to move toward, even in a small way?", "How does this thought pull you away from what matters?"],
-    "example_exercises": ["values card sort", "defusion phrase practice", "small committed action plan"],
-    "cautions": ["Avoid implying clients should accept unsafe or unjust conditions."],
-    "contraindication_or_referral_considerations": ["Address imminent risk, coercion, medical concerns, or unmet basic needs first as clinically indicated."],
-    "setting_limitations": ["Placeholder only; not a complete ACT protocol."],
-    "clinician_scope_notes": "Use within clinician competence and adapt for context and culture.",
-    "evidence_source_placeholder": "Evidence/source field intentionally pending human clinical review; no citation invented.",
+    "description": "Placeholder entry for ACT; pending qualified clinical review and not a diagnosis-specific recommendation.",
+    "target_domains": [
+      "Meaning and cognition",
+      "Identity and self-continuity",
+      "Behavioral reinforcement and avoidance",
+      "Strengths and protective factors"
+    ],
+    "target_processes": [
+      "values",
+      "defusion",
+      "committed action"
+    ],
+    "treatment_stage": "Values-based formulation and action planning",
+    "client_goals": [
+      "increase coping options",
+      "clarify priorities",
+      "reduce avoidant costs",
+      "coordinate safe care",
+      "reconnect with values"
+    ],
+    "universal_review_gates": [
+      {
+        "id": "informed_choice",
+        "label": "Client preference and informed choice have been discussed",
+        "required_evidence_source": "client preference",
+        "hard_prerequisite": false,
+        "clarification_questions": [
+          "What options, preferences, concerns, or declines has the client expressed?"
+        ]
+      },
+      {
+        "id": "safety_review",
+        "label": "Acute safety concerns and established clinical procedures have been reviewed without declaring safety status",
+        "required_evidence_source": "clinician confirmation",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "Are there acute safety concerns requiring established clinical procedures before approach selection?"
+        ]
+      },
+      {
+        "id": "medical_review",
+        "label": "Medical/referral considerations have been considered as potentially concurrent, not only after psychological explanations fail",
+        "required_evidence_source": "clinician confirmation",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "Are medical, medication, sleep, substance, pain, neurological, or referral considerations relevant now?"
+        ]
+      },
+      {
+        "id": "scope_setting_resources",
+        "label": "Clinician competence, supervision, setting, and resource availability fit this approach",
+        "required_evidence_source": "clinician confirmation",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "Is this approach within competence, supervision, setting, and available resources?"
+        ]
+      }
+    ],
+    "approach_specific_prerequisites": [
+      {
+        "id": "collaborative_goal",
+        "label": "A collaborative target or purpose for this approach is identified",
+        "required_evidence_source": "intake fact",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "What specific target, purpose, or goal would this approach address?"
+        ]
+      }
+    ],
+    "conditional_considerations": [
+      {
+        "id": "client_preference_visibility",
+        "label": "Client preference, informed choice, culture, and feasibility should remain visible in the plan.",
+        "evidence_sources": [
+          "client preference",
+          "clinician confirmation"
+        ],
+        "clarification_questions": [
+          "How does the client describe preference, fit, culture, feasibility, or concerns?"
+        ]
+      },
+      {
+        "id": "coexisting_medical_psychological",
+        "label": "Medical and psychological contributors may coexist and should be considered concurrently.",
+        "evidence_sources": [
+          "domain activation",
+          "intake fact"
+        ],
+        "clarification_questions": [
+          "What medical and psychological/contextual contributors should be tracked side by side?"
+        ]
+      }
+    ],
+    "priority_shifting_or_referral_conditions": [
+      {
+        "id": "acute_safety_priority",
+        "label": "Acute safety concerns require established clinical procedures before ordinary approach selection; the app must not declare the person safe or unsafe.",
+        "status_if_present": "defer_while_priority_needs_are_addressed",
+        "evidence_sources": [
+          "clinician confirmation",
+          "intake fact"
+        ],
+        "clarification_questions": [
+          "Do current risk details require established clinical procedures now?"
+        ]
+      },
+      {
+        "id": "urgent_medical_priority",
+        "label": "Urgent medical/referral concerns may require consultation, referral, or emergency procedures concurrent with or before psychosocial work.",
+        "status_if_present": "consultation_or_referral_required",
+        "evidence_sources": [
+          "domain activation",
+          "clinician confirmation",
+          "intake fact"
+        ],
+        "clarification_questions": [
+          "Are urgent medical, neurological, medication, substance, or severe sleep concerns present?"
+        ]
+      }
+    ],
+    "scope_or_setting_requirements": [
+      "Use within documented competence, supervision, role, setting, and resource availability.",
+      "Do not treat this placeholder as a full protocol or as authorization for out-of-scope care."
+    ],
+    "application_guidance": "Use only as clinician-reviewed decision support linked to source facts, domain activations, confirmations, and client preference.",
+    "example_questions": [
+      "What evidence supports considering this approach now?",
+      "What information is still missing before deciding?"
+    ],
+    "example_exercises": [
+      "collaborative option review",
+      "source-fact-linked plan draft"
+    ],
+    "cautions": [
+      "Do not diagnose, prescribe, infer causality, or treat missing information as a contraindication by itself."
+    ],
+    "contraindication_or_referral_considerations": [
+      "Priority-shifting conditions should trigger clinician review, consultation, referral, or established procedures as clinically indicated."
+    ],
+    "setting_limitations": [
+      "Prototype placeholder; qualified clinical review pending."
+    ],
+    "clinician_scope_notes": "Use within clinician competence, supervision, setting, and resource limits.",
+    "evidence_source_placeholder": "Evidence/source field intentionally pending qualified clinical review; no citation invented.",
+    "clinical_review_status": "pending qualified clinical review",
     "clinician_review_required": true
   },
   {
     "approach_name": "Behavioral Activation",
-    "description": "Placeholder entry for increasing meaningful, feasible activity and reducing avoidance loops.",
-    "target_domains": ["Behavioral reinforcement and avoidance", "Allostatic load", "Executive functioning", "Strengths and protective factors"],
-    "target_processes": ["activity scheduling", "reinforcement mapping", "graded action", "routine rebuilding"],
-    "treatment_stage": "Early structured action planning when safety, medical limits, and access barriers are considered.",
-    "client_goals": ["rebuild routine", "increase meaningful action", "reduce avoidance costs"],
-    "prerequisites": ["medical or physical limitations clarified", "activities are safe and feasible", "environmental barriers considered"],
-    "application_guidance": "Start with small, values-consistent, realistic steps and review outcomes.",
-    "example_questions": ["What activity has a chance of helping by 5 percent?", "What barriers would make this plan unrealistic?"],
-    "example_exercises": ["activity monitoring", "graded task plan", "pleasure/mastery review"],
-    "cautions": ["Do not frame inactivity as lack of motivation when pain, fatigue, unsafe conditions, or structural barriers may be present."],
-    "contraindication_or_referral_considerations": ["Clarify chronic pain, unexplained fatigue, medical restrictions, and safety concerns before activity increases."],
-    "setting_limitations": ["Placeholder only; not a full protocol."],
-    "clinician_scope_notes": "Coordinate with medical providers where physical activity or health limitations are relevant.",
-    "evidence_source_placeholder": "Evidence/source field intentionally pending human clinical review; no citation invented.",
+    "description": "Placeholder entry for Behavioral Activation; pending qualified clinical review and not a diagnosis-specific recommendation.",
+    "target_domains": [
+      "Behavioral reinforcement and avoidance",
+      "Allostatic load",
+      "Executive functioning",
+      "Strengths and protective factors"
+    ],
+    "target_processes": [
+      "activity",
+      "reinforcement",
+      "routine",
+      "graded action"
+    ],
+    "treatment_stage": "Early structured action planning",
+    "client_goals": [
+      "increase coping options",
+      "clarify priorities",
+      "reduce avoidant costs",
+      "coordinate safe care",
+      "reconnect with values"
+    ],
+    "universal_review_gates": [
+      {
+        "id": "informed_choice",
+        "label": "Client preference and informed choice have been discussed",
+        "required_evidence_source": "client preference",
+        "hard_prerequisite": false,
+        "clarification_questions": [
+          "What options, preferences, concerns, or declines has the client expressed?"
+        ]
+      },
+      {
+        "id": "safety_review",
+        "label": "Acute safety concerns and established clinical procedures have been reviewed without declaring safety status",
+        "required_evidence_source": "clinician confirmation",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "Are there acute safety concerns requiring established clinical procedures before approach selection?"
+        ]
+      },
+      {
+        "id": "medical_review",
+        "label": "Medical/referral considerations have been considered as potentially concurrent, not only after psychological explanations fail",
+        "required_evidence_source": "clinician confirmation",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "Are medical, medication, sleep, substance, pain, neurological, or referral considerations relevant now?"
+        ]
+      },
+      {
+        "id": "scope_setting_resources",
+        "label": "Clinician competence, supervision, setting, and resource availability fit this approach",
+        "required_evidence_source": "clinician confirmation",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "Is this approach within competence, supervision, setting, and available resources?"
+        ]
+      }
+    ],
+    "approach_specific_prerequisites": [
+      {
+        "id": "collaborative_goal",
+        "label": "A collaborative target or purpose for this approach is identified",
+        "required_evidence_source": "intake fact",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "What specific target, purpose, or goal would this approach address?"
+        ]
+      }
+    ],
+    "conditional_considerations": [
+      {
+        "id": "client_preference_visibility",
+        "label": "Client preference, informed choice, culture, and feasibility should remain visible in the plan.",
+        "evidence_sources": [
+          "client preference",
+          "clinician confirmation"
+        ],
+        "clarification_questions": [
+          "How does the client describe preference, fit, culture, feasibility, or concerns?"
+        ]
+      },
+      {
+        "id": "coexisting_medical_psychological",
+        "label": "Medical and psychological contributors may coexist and should be considered concurrently.",
+        "evidence_sources": [
+          "domain activation",
+          "intake fact"
+        ],
+        "clarification_questions": [
+          "What medical and psychological/contextual contributors should be tracked side by side?"
+        ]
+      }
+    ],
+    "priority_shifting_or_referral_conditions": [
+      {
+        "id": "acute_safety_priority",
+        "label": "Acute safety concerns require established clinical procedures before ordinary approach selection; the app must not declare the person safe or unsafe.",
+        "status_if_present": "defer_while_priority_needs_are_addressed",
+        "evidence_sources": [
+          "clinician confirmation",
+          "intake fact"
+        ],
+        "clarification_questions": [
+          "Do current risk details require established clinical procedures now?"
+        ]
+      },
+      {
+        "id": "urgent_medical_priority",
+        "label": "Urgent medical/referral concerns may require consultation, referral, or emergency procedures concurrent with or before psychosocial work.",
+        "status_if_present": "consultation_or_referral_required",
+        "evidence_sources": [
+          "domain activation",
+          "clinician confirmation",
+          "intake fact"
+        ],
+        "clarification_questions": [
+          "Are urgent medical, neurological, medication, substance, or severe sleep concerns present?"
+        ]
+      }
+    ],
+    "scope_or_setting_requirements": [
+      "Use within documented competence, supervision, role, setting, and resource availability.",
+      "Do not treat this placeholder as a full protocol or as authorization for out-of-scope care."
+    ],
+    "application_guidance": "Use only as clinician-reviewed decision support linked to source facts, domain activations, confirmations, and client preference.",
+    "example_questions": [
+      "What evidence supports considering this approach now?",
+      "What information is still missing before deciding?"
+    ],
+    "example_exercises": [
+      "collaborative option review",
+      "source-fact-linked plan draft"
+    ],
+    "cautions": [
+      "Do not diagnose, prescribe, infer causality, or treat missing information as a contraindication by itself."
+    ],
+    "contraindication_or_referral_considerations": [
+      "Priority-shifting conditions should trigger clinician review, consultation, referral, or established procedures as clinically indicated."
+    ],
+    "setting_limitations": [
+      "Prototype placeholder; qualified clinical review pending."
+    ],
+    "clinician_scope_notes": "Use within clinician competence, supervision, setting, and resource limits.",
+    "evidence_source_placeholder": "Evidence/source field intentionally pending qualified clinical review; no citation invented.",
+    "clinical_review_status": "pending qualified clinical review",
     "clinician_review_required": true
   },
   {
     "approach_name": "Motivational Interviewing",
-    "description": "Placeholder entry for exploring ambivalence and strengthening client-led reasons for change.",
-    "target_domains": ["Behavioral reinforcement and avoidance", "Meaning and cognition", "Strengths and protective factors", "Medical and physiological contributors"],
-    "target_processes": ["ambivalence", "change talk", "values discrepancy", "autonomy support"],
-    "treatment_stage": "Engagement and goal clarification.",
-    "client_goals": ["clarify priorities", "explore readiness", "support autonomous change"],
-    "prerequisites": ["clinician maintains autonomy-supportive stance", "safety and referral needs considered"],
-    "application_guidance": "Use open questions, affirmations, reflections, and summaries without pushing a predetermined plan.",
-    "example_questions": ["What feels important about changing this?", "What makes it hard to change right now?"],
-    "example_exercises": ["decisional balance", "importance/confidence rulers", "change-talk summary"],
-    "cautions": ["Do not use MI to delay necessary emergency or medical referral steps."],
-    "contraindication_or_referral_considerations": ["Acute safety or medical concerns may require immediate procedures beyond motivational exploration."],
-    "setting_limitations": ["Placeholder only; not a full MI training resource."],
-    "clinician_scope_notes": "Use within scope and adapt to client culture and context.",
-    "evidence_source_placeholder": "Evidence/source field intentionally pending human clinical review; no citation invented.",
+    "description": "Placeholder entry for Motivational Interviewing; pending qualified clinical review and not a diagnosis-specific recommendation.",
+    "target_domains": [
+      "Behavioral reinforcement and avoidance",
+      "Meaning and cognition",
+      "Strengths and protective factors",
+      "Medical and physiological contributors"
+    ],
+    "target_processes": [
+      "ambivalence",
+      "change target",
+      "change talk",
+      "autonomy"
+    ],
+    "treatment_stage": "Engagement and goal clarification",
+    "client_goals": [
+      "increase coping options",
+      "clarify priorities",
+      "reduce avoidant costs",
+      "coordinate safe care",
+      "reconnect with values"
+    ],
+    "universal_review_gates": [
+      {
+        "id": "informed_choice",
+        "label": "Client preference and informed choice have been discussed",
+        "required_evidence_source": "client preference",
+        "hard_prerequisite": false,
+        "clarification_questions": [
+          "What options, preferences, concerns, or declines has the client expressed?"
+        ]
+      },
+      {
+        "id": "safety_review",
+        "label": "Acute safety concerns and established clinical procedures have been reviewed without declaring safety status",
+        "required_evidence_source": "clinician confirmation",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "Are there acute safety concerns requiring established clinical procedures before approach selection?"
+        ]
+      },
+      {
+        "id": "medical_review",
+        "label": "Medical/referral considerations have been considered as potentially concurrent, not only after psychological explanations fail",
+        "required_evidence_source": "clinician confirmation",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "Are medical, medication, sleep, substance, pain, neurological, or referral considerations relevant now?"
+        ]
+      },
+      {
+        "id": "scope_setting_resources",
+        "label": "Clinician competence, supervision, setting, and resource availability fit this approach",
+        "required_evidence_source": "clinician confirmation",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "Is this approach within competence, supervision, setting, and available resources?"
+        ]
+      }
+    ],
+    "approach_specific_prerequisites": [
+      {
+        "id": "collaborative_goal",
+        "label": "A collaborative target or purpose for this approach is identified",
+        "required_evidence_source": "intake fact",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "What specific target, purpose, or goal would this approach address?"
+        ]
+      },
+      {
+        "id": "specific_change_target",
+        "label": "A specific change target is named",
+        "required_evidence_source": "intake fact",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "What specific change target is being explored?"
+        ]
+      },
+      {
+        "id": "ambivalence_present",
+        "label": "Client ambivalence about that target is present",
+        "required_evidence_source": "intake fact",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "What does the client identify as both reasons for and against change?"
+        ]
+      }
+    ],
+    "conditional_considerations": [
+      {
+        "id": "client_preference_visibility",
+        "label": "Client preference, informed choice, culture, and feasibility should remain visible in the plan.",
+        "evidence_sources": [
+          "client preference",
+          "clinician confirmation"
+        ],
+        "clarification_questions": [
+          "How does the client describe preference, fit, culture, feasibility, or concerns?"
+        ]
+      },
+      {
+        "id": "coexisting_medical_psychological",
+        "label": "Medical and psychological contributors may coexist and should be considered concurrently.",
+        "evidence_sources": [
+          "domain activation",
+          "intake fact"
+        ],
+        "clarification_questions": [
+          "What medical and psychological/contextual contributors should be tracked side by side?"
+        ]
+      }
+    ],
+    "priority_shifting_or_referral_conditions": [
+      {
+        "id": "acute_safety_priority",
+        "label": "Acute safety concerns require established clinical procedures before ordinary approach selection; the app must not declare the person safe or unsafe.",
+        "status_if_present": "defer_while_priority_needs_are_addressed",
+        "evidence_sources": [
+          "clinician confirmation",
+          "intake fact"
+        ],
+        "clarification_questions": [
+          "Do current risk details require established clinical procedures now?"
+        ]
+      },
+      {
+        "id": "urgent_medical_priority",
+        "label": "Urgent medical/referral concerns may require consultation, referral, or emergency procedures concurrent with or before psychosocial work.",
+        "status_if_present": "consultation_or_referral_required",
+        "evidence_sources": [
+          "domain activation",
+          "clinician confirmation",
+          "intake fact"
+        ],
+        "clarification_questions": [
+          "Are urgent medical, neurological, medication, substance, or severe sleep concerns present?"
+        ]
+      }
+    ],
+    "scope_or_setting_requirements": [
+      "Use within documented competence, supervision, role, setting, and resource availability.",
+      "Do not treat this placeholder as a full protocol or as authorization for out-of-scope care."
+    ],
+    "application_guidance": "Use only as clinician-reviewed decision support linked to source facts, domain activations, confirmations, and client preference.",
+    "example_questions": [
+      "What evidence supports considering this approach now?",
+      "What information is still missing before deciding?"
+    ],
+    "example_exercises": [
+      "collaborative option review",
+      "source-fact-linked plan draft"
+    ],
+    "cautions": [
+      "Do not diagnose, prescribe, infer causality, or treat missing information as a contraindication by itself."
+    ],
+    "contraindication_or_referral_considerations": [
+      "Priority-shifting conditions should trigger clinician review, consultation, referral, or established procedures as clinically indicated."
+    ],
+    "setting_limitations": [
+      "Prototype placeholder; qualified clinical review pending."
+    ],
+    "clinician_scope_notes": "Use within clinician competence, supervision, setting, and resource limits.",
+    "evidence_source_placeholder": "Evidence/source field intentionally pending qualified clinical review; no citation invented.",
+    "clinical_review_status": "pending qualified clinical review",
     "clinician_review_required": true
   },
   {
     "approach_name": "Attachment-informed therapy",
-    "description": "Placeholder entry for working with relational safety, boundaries, needs, support seeking, and rupture/repair patterns.",
-    "target_domains": ["Attachment and relational functioning", "Identity and self-continuity", "Emotion regulation", "Interpretive prism and schemas"],
-    "target_processes": ["relational safety", "boundary setting", "support seeking", "rupture repair"],
-    "treatment_stage": "Formulation, stabilization, and relational pattern work.",
-    "client_goals": ["improve relational safety", "communicate needs", "understand repeated relational cycles"],
-    "prerequisites": ["relationship safety assessed", "clinician avoids assuming attachment category or diagnosis"],
-    "application_guidance": "Map relational sequences while validating realistic danger or harm.",
-    "example_questions": ["What happens between you and others when distress rises?", "Where does repair become possible?"],
-    "example_exercises": ["relational cycle map", "needs and boundaries script", "support plan"],
-    "cautions": ["Do not reinterpret coercion or abuse as only an attachment pattern."],
-    "contraindication_or_referral_considerations": ["Consider safety planning, mandated reporting obligations, or specialized referral when clinically indicated."],
-    "setting_limitations": ["Placeholder only; not a full attachment-based protocol."],
-    "clinician_scope_notes": "Use within clinician competence and supervision requirements.",
-    "evidence_source_placeholder": "Evidence/source field intentionally pending human clinical review; no citation invented.",
+    "description": "Placeholder entry for Attachment-informed therapy; pending qualified clinical review and not a diagnosis-specific recommendation.",
+    "target_domains": [
+      "Attachment and relational functioning",
+      "Identity and self-continuity",
+      "Emotion regulation",
+      "Interpretive prism and schemas"
+    ],
+    "target_processes": [
+      "relational safety",
+      "boundary",
+      "support seeking",
+      "repair"
+    ],
+    "treatment_stage": "Formulation and relational pattern work",
+    "client_goals": [
+      "increase coping options",
+      "clarify priorities",
+      "reduce avoidant costs",
+      "coordinate safe care",
+      "reconnect with values"
+    ],
+    "universal_review_gates": [
+      {
+        "id": "informed_choice",
+        "label": "Client preference and informed choice have been discussed",
+        "required_evidence_source": "client preference",
+        "hard_prerequisite": false,
+        "clarification_questions": [
+          "What options, preferences, concerns, or declines has the client expressed?"
+        ]
+      },
+      {
+        "id": "safety_review",
+        "label": "Acute safety concerns and established clinical procedures have been reviewed without declaring safety status",
+        "required_evidence_source": "clinician confirmation",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "Are there acute safety concerns requiring established clinical procedures before approach selection?"
+        ]
+      },
+      {
+        "id": "medical_review",
+        "label": "Medical/referral considerations have been considered as potentially concurrent, not only after psychological explanations fail",
+        "required_evidence_source": "clinician confirmation",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "Are medical, medication, sleep, substance, pain, neurological, or referral considerations relevant now?"
+        ]
+      },
+      {
+        "id": "scope_setting_resources",
+        "label": "Clinician competence, supervision, setting, and resource availability fit this approach",
+        "required_evidence_source": "clinician confirmation",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "Is this approach within competence, supervision, setting, and available resources?"
+        ]
+      }
+    ],
+    "approach_specific_prerequisites": [
+      {
+        "id": "collaborative_goal",
+        "label": "A collaborative target or purpose for this approach is identified",
+        "required_evidence_source": "intake fact",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "What specific target, purpose, or goal would this approach address?"
+        ]
+      }
+    ],
+    "conditional_considerations": [
+      {
+        "id": "client_preference_visibility",
+        "label": "Client preference, informed choice, culture, and feasibility should remain visible in the plan.",
+        "evidence_sources": [
+          "client preference",
+          "clinician confirmation"
+        ],
+        "clarification_questions": [
+          "How does the client describe preference, fit, culture, feasibility, or concerns?"
+        ]
+      },
+      {
+        "id": "coexisting_medical_psychological",
+        "label": "Medical and psychological contributors may coexist and should be considered concurrently.",
+        "evidence_sources": [
+          "domain activation",
+          "intake fact"
+        ],
+        "clarification_questions": [
+          "What medical and psychological/contextual contributors should be tracked side by side?"
+        ]
+      }
+    ],
+    "priority_shifting_or_referral_conditions": [
+      {
+        "id": "acute_safety_priority",
+        "label": "Acute safety concerns require established clinical procedures before ordinary approach selection; the app must not declare the person safe or unsafe.",
+        "status_if_present": "defer_while_priority_needs_are_addressed",
+        "evidence_sources": [
+          "clinician confirmation",
+          "intake fact"
+        ],
+        "clarification_questions": [
+          "Do current risk details require established clinical procedures now?"
+        ]
+      },
+      {
+        "id": "urgent_medical_priority",
+        "label": "Urgent medical/referral concerns may require consultation, referral, or emergency procedures concurrent with or before psychosocial work.",
+        "status_if_present": "consultation_or_referral_required",
+        "evidence_sources": [
+          "domain activation",
+          "clinician confirmation",
+          "intake fact"
+        ],
+        "clarification_questions": [
+          "Are urgent medical, neurological, medication, substance, or severe sleep concerns present?"
+        ]
+      }
+    ],
+    "scope_or_setting_requirements": [
+      "Use within documented competence, supervision, role, setting, and resource availability.",
+      "Do not treat this placeholder as a full protocol or as authorization for out-of-scope care."
+    ],
+    "application_guidance": "Use only as clinician-reviewed decision support linked to source facts, domain activations, confirmations, and client preference.",
+    "example_questions": [
+      "What evidence supports considering this approach now?",
+      "What information is still missing before deciding?"
+    ],
+    "example_exercises": [
+      "collaborative option review",
+      "source-fact-linked plan draft"
+    ],
+    "cautions": [
+      "Do not diagnose, prescribe, infer causality, or treat missing information as a contraindication by itself."
+    ],
+    "contraindication_or_referral_considerations": [
+      "Priority-shifting conditions should trigger clinician review, consultation, referral, or established procedures as clinically indicated."
+    ],
+    "setting_limitations": [
+      "Prototype placeholder; qualified clinical review pending."
+    ],
+    "clinician_scope_notes": "Use within clinician competence, supervision, setting, and resource limits.",
+    "evidence_source_placeholder": "Evidence/source field intentionally pending qualified clinical review; no citation invented.",
+    "clinical_review_status": "pending qualified clinical review",
     "clinician_review_required": true
   },
   {
     "approach_name": "Trauma-informed stabilization",
-    "description": "Placeholder entry for safety, grounding, pacing, choice, collaboration, and stabilization before any trauma-processing work is considered.",
-    "target_domains": ["Nervous-system regulation", "Salience and threat detection", "Emotion regulation", "Medical and physiological contributors"],
-    "target_processes": ["grounding", "stabilization", "choice and control", "arousal tracking"],
-    "treatment_stage": "Stabilization and safety; not trauma processing.",
-    "client_goals": ["increase present-moment safety", "reduce overwhelm", "build regulation options"],
-    "prerequisites": ["safety reviewed", "medical/referral considerations reviewed", "client consent and pacing established"],
-    "application_guidance": "Use non-assumptive trauma-informed principles without concluding trauma history or diagnosis.",
-    "example_questions": ["What helps you feel one degree safer right now?", "How can we pace this so it stays workable?"],
-    "example_exercises": ["orientation to room", "grounding menu", "stabilization plan"],
-    "cautions": ["Do not move into trauma processing based on this placeholder."],
-    "contraindication_or_referral_considerations": ["Urgent safety concerns, acute confusion, severe sleep loss, intoxication/withdrawal, or medical instability may require referral or emergency procedures."],
-    "setting_limitations": ["Placeholder only; does not authorize trauma processing."],
-    "clinician_scope_notes": "Use within trauma-informed competence and supervision.",
-    "evidence_source_placeholder": "Evidence/source field intentionally pending human clinical review; no citation invented.",
+    "description": "Placeholder entry for Trauma-informed stabilization; pending qualified clinical review and not a diagnosis-specific recommendation.",
+    "target_domains": [
+      "Nervous-system regulation",
+      "Salience and threat detection",
+      "Emotion regulation",
+      "Medical and physiological contributors"
+    ],
+    "target_processes": [
+      "grounding",
+      "stabilization",
+      "choice",
+      "arousal"
+    ],
+    "treatment_stage": "Stabilization and safety; not trauma processing",
+    "client_goals": [
+      "increase coping options",
+      "clarify priorities",
+      "reduce avoidant costs",
+      "coordinate safe care",
+      "reconnect with values"
+    ],
+    "universal_review_gates": [
+      {
+        "id": "informed_choice",
+        "label": "Client preference and informed choice have been discussed",
+        "required_evidence_source": "client preference",
+        "hard_prerequisite": false,
+        "clarification_questions": [
+          "What options, preferences, concerns, or declines has the client expressed?"
+        ]
+      },
+      {
+        "id": "safety_review",
+        "label": "Acute safety concerns and established clinical procedures have been reviewed without declaring safety status",
+        "required_evidence_source": "clinician confirmation",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "Are there acute safety concerns requiring established clinical procedures before approach selection?"
+        ]
+      },
+      {
+        "id": "medical_review",
+        "label": "Medical/referral considerations have been considered as potentially concurrent, not only after psychological explanations fail",
+        "required_evidence_source": "clinician confirmation",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "Are medical, medication, sleep, substance, pain, neurological, or referral considerations relevant now?"
+        ]
+      },
+      {
+        "id": "scope_setting_resources",
+        "label": "Clinician competence, supervision, setting, and resource availability fit this approach",
+        "required_evidence_source": "clinician confirmation",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "Is this approach within competence, supervision, setting, and available resources?"
+        ]
+      }
+    ],
+    "approach_specific_prerequisites": [
+      {
+        "id": "collaborative_goal",
+        "label": "A collaborative target or purpose for this approach is identified",
+        "required_evidence_source": "intake fact",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "What specific target, purpose, or goal would this approach address?"
+        ]
+      },
+      {
+        "id": "pacing_choice",
+        "label": "Client choice, pacing, and stabilization purpose are explicit",
+        "required_evidence_source": "client preference",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "What pacing and stabilization choices has the client agreed to?"
+        ]
+      }
+    ],
+    "conditional_considerations": [
+      {
+        "id": "client_preference_visibility",
+        "label": "Client preference, informed choice, culture, and feasibility should remain visible in the plan.",
+        "evidence_sources": [
+          "client preference",
+          "clinician confirmation"
+        ],
+        "clarification_questions": [
+          "How does the client describe preference, fit, culture, feasibility, or concerns?"
+        ]
+      },
+      {
+        "id": "coexisting_medical_psychological",
+        "label": "Medical and psychological contributors may coexist and should be considered concurrently.",
+        "evidence_sources": [
+          "domain activation",
+          "intake fact"
+        ],
+        "clarification_questions": [
+          "What medical and psychological/contextual contributors should be tracked side by side?"
+        ]
+      }
+    ],
+    "priority_shifting_or_referral_conditions": [
+      {
+        "id": "acute_safety_priority",
+        "label": "Acute safety concerns require established clinical procedures before ordinary approach selection; the app must not declare the person safe or unsafe.",
+        "status_if_present": "defer_while_priority_needs_are_addressed",
+        "evidence_sources": [
+          "clinician confirmation",
+          "intake fact"
+        ],
+        "clarification_questions": [
+          "Do current risk details require established clinical procedures now?"
+        ]
+      },
+      {
+        "id": "urgent_medical_priority",
+        "label": "Urgent medical/referral concerns may require consultation, referral, or emergency procedures concurrent with or before psychosocial work.",
+        "status_if_present": "consultation_or_referral_required",
+        "evidence_sources": [
+          "domain activation",
+          "clinician confirmation",
+          "intake fact"
+        ],
+        "clarification_questions": [
+          "Are urgent medical, neurological, medication, substance, or severe sleep concerns present?"
+        ]
+      }
+    ],
+    "scope_or_setting_requirements": [
+      "Use within documented competence, supervision, role, setting, and resource availability.",
+      "Do not treat this placeholder as a full protocol or as authorization for out-of-scope care."
+    ],
+    "application_guidance": "Use only as clinician-reviewed decision support linked to source facts, domain activations, confirmations, and client preference.",
+    "example_questions": [
+      "What evidence supports considering this approach now?",
+      "What information is still missing before deciding?"
+    ],
+    "example_exercises": [
+      "collaborative option review",
+      "source-fact-linked plan draft"
+    ],
+    "cautions": [
+      "Do not diagnose, prescribe, infer causality, or treat missing information as a contraindication by itself."
+    ],
+    "contraindication_or_referral_considerations": [
+      "Priority-shifting conditions should trigger clinician review, consultation, referral, or established procedures as clinically indicated."
+    ],
+    "setting_limitations": [
+      "Prototype placeholder; qualified clinical review pending."
+    ],
+    "clinician_scope_notes": "Use within clinician competence, supervision, setting, and resource limits.",
+    "evidence_source_placeholder": "Evidence/source field intentionally pending qualified clinical review; no citation invented.",
+    "clinical_review_status": "pending qualified clinical review",
+    "clinician_review_required": true
+  },
+  {
+    "approach_name": "Trauma-focused psychotherapy",
+    "description": "Placeholder entry for Trauma-focused psychotherapy; pending qualified clinical review and not a diagnosis-specific recommendation.",
+    "target_domains": [
+      "Salience and threat detection",
+      "Nervous-system regulation",
+      "Emotion regulation",
+      "Meaning and cognition"
+    ],
+    "target_processes": [
+      "trauma processing",
+      "memory",
+      "meaning",
+      "arousal"
+    ],
+    "treatment_stage": "Specialized trauma processing only after assessment and stabilization",
+    "client_goals": [
+      "increase coping options",
+      "clarify priorities",
+      "reduce avoidant costs",
+      "coordinate safe care",
+      "reconnect with values"
+    ],
+    "universal_review_gates": [
+      {
+        "id": "informed_choice",
+        "label": "Client preference and informed choice have been discussed",
+        "required_evidence_source": "client preference",
+        "hard_prerequisite": false,
+        "clarification_questions": [
+          "What options, preferences, concerns, or declines has the client expressed?"
+        ]
+      },
+      {
+        "id": "safety_review",
+        "label": "Acute safety concerns and established clinical procedures have been reviewed without declaring safety status",
+        "required_evidence_source": "clinician confirmation",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "Are there acute safety concerns requiring established clinical procedures before approach selection?"
+        ]
+      },
+      {
+        "id": "medical_review",
+        "label": "Medical/referral considerations have been considered as potentially concurrent, not only after psychological explanations fail",
+        "required_evidence_source": "clinician confirmation",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "Are medical, medication, sleep, substance, pain, neurological, or referral considerations relevant now?"
+        ]
+      },
+      {
+        "id": "scope_setting_resources",
+        "label": "Clinician competence, supervision, setting, and resource availability fit this approach",
+        "required_evidence_source": "clinician confirmation",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "Is this approach within competence, supervision, setting, and available resources?"
+        ]
+      }
+    ],
+    "approach_specific_prerequisites": [
+      {
+        "id": "collaborative_goal",
+        "label": "A collaborative target or purpose for this approach is identified",
+        "required_evidence_source": "intake fact",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "What specific target, purpose, or goal would this approach address?"
+        ]
+      },
+      {
+        "id": "trauma_processing_readiness",
+        "label": "Readiness, stabilization, consent, and specialized trauma-processing scope are confirmed without requiring a diagnosis",
+        "required_evidence_source": "clinician confirmation",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "Has readiness for trauma processing been assessed and confirmed without relying on a diagnosis?"
+        ]
+      }
+    ],
+    "conditional_considerations": [
+      {
+        "id": "client_preference_visibility",
+        "label": "Client preference, informed choice, culture, and feasibility should remain visible in the plan.",
+        "evidence_sources": [
+          "client preference",
+          "clinician confirmation"
+        ],
+        "clarification_questions": [
+          "How does the client describe preference, fit, culture, feasibility, or concerns?"
+        ]
+      },
+      {
+        "id": "coexisting_medical_psychological",
+        "label": "Medical and psychological contributors may coexist and should be considered concurrently.",
+        "evidence_sources": [
+          "domain activation",
+          "intake fact"
+        ],
+        "clarification_questions": [
+          "What medical and psychological/contextual contributors should be tracked side by side?"
+        ]
+      }
+    ],
+    "priority_shifting_or_referral_conditions": [
+      {
+        "id": "acute_safety_priority",
+        "label": "Acute safety concerns require established clinical procedures before ordinary approach selection; the app must not declare the person safe or unsafe.",
+        "status_if_present": "defer_while_priority_needs_are_addressed",
+        "evidence_sources": [
+          "clinician confirmation",
+          "intake fact"
+        ],
+        "clarification_questions": [
+          "Do current risk details require established clinical procedures now?"
+        ]
+      },
+      {
+        "id": "urgent_medical_priority",
+        "label": "Urgent medical/referral concerns may require consultation, referral, or emergency procedures concurrent with or before psychosocial work.",
+        "status_if_present": "consultation_or_referral_required",
+        "evidence_sources": [
+          "domain activation",
+          "clinician confirmation",
+          "intake fact"
+        ],
+        "clarification_questions": [
+          "Are urgent medical, neurological, medication, substance, or severe sleep concerns present?"
+        ]
+      }
+    ],
+    "scope_or_setting_requirements": [
+      "Use within documented competence, supervision, role, setting, and resource availability.",
+      "Do not treat this placeholder as a full protocol or as authorization for out-of-scope care."
+    ],
+    "application_guidance": "Use only as clinician-reviewed decision support linked to source facts, domain activations, confirmations, and client preference.",
+    "example_questions": [
+      "What evidence supports considering this approach now?",
+      "What information is still missing before deciding?"
+    ],
+    "example_exercises": [
+      "collaborative option review",
+      "source-fact-linked plan draft"
+    ],
+    "cautions": [
+      "Do not diagnose, prescribe, infer causality, or treat missing information as a contraindication by itself."
+    ],
+    "contraindication_or_referral_considerations": [
+      "Priority-shifting conditions should trigger clinician review, consultation, referral, or established procedures as clinically indicated."
+    ],
+    "setting_limitations": [
+      "Prototype placeholder; qualified clinical review pending."
+    ],
+    "clinician_scope_notes": "Use within clinician competence, supervision, setting, and resource limits.",
+    "evidence_source_placeholder": "Evidence/source field intentionally pending qualified clinical review; no citation invented.",
+    "clinical_review_status": "pending qualified clinical review",
     "clinician_review_required": true
   },
   {
     "approach_name": "Family or systemic approaches",
-    "description": "Placeholder entry for considering relational systems, family roles, communication patterns, and contextual supports.",
-    "target_domains": ["Attachment and relational functioning", "Environmental and social conditions", "Behavioral reinforcement and avoidance", "Strengths and protective factors"],
-    "target_processes": ["interaction patterns", "support coordination", "communication", "role expectations"],
-    "treatment_stage": "Assessment, engagement, and systemic formulation when appropriate.",
-    "client_goals": ["reduce relational cycles", "coordinate support", "improve communication"],
-    "prerequisites": ["consent and confidentiality boundaries clarified", "safety and coercion assessed", "participants appropriate for setting"],
-    "application_guidance": "Use systemic framing without blaming the client or family members.",
-    "example_questions": ["Who is affected by this pattern?", "What happens in the system before and after escalation?"],
-    "example_exercises": ["interaction sequence map", "support roles plan", "communication agreement"],
-    "cautions": ["Do not include unsafe or coercive participants without careful safety planning."],
-    "contraindication_or_referral_considerations": ["Specialized referral may be needed for violence, coercive control, mandated reporting issues, or high-conflict legal contexts."],
-    "setting_limitations": ["Placeholder only; does not replace family/systemic therapy training."],
-    "clinician_scope_notes": "Use only when within scope, consent, and setting constraints.",
-    "evidence_source_placeholder": "Evidence/source field intentionally pending human clinical review; no citation invented.",
+    "description": "Placeholder entry for Family or systemic approaches; pending qualified clinical review and not a diagnosis-specific recommendation.",
+    "target_domains": [
+      "Attachment and relational functioning",
+      "Environmental and social conditions",
+      "Behavioral reinforcement and avoidance",
+      "Strengths and protective factors"
+    ],
+    "target_processes": [
+      "family",
+      "system",
+      "communication",
+      "interaction"
+    ],
+    "treatment_stage": "Assessment, engagement, and systemic formulation",
+    "client_goals": [
+      "increase coping options",
+      "clarify priorities",
+      "reduce avoidant costs",
+      "coordinate safe care",
+      "reconnect with values"
+    ],
+    "universal_review_gates": [
+      {
+        "id": "informed_choice",
+        "label": "Client preference and informed choice have been discussed",
+        "required_evidence_source": "client preference",
+        "hard_prerequisite": false,
+        "clarification_questions": [
+          "What options, preferences, concerns, or declines has the client expressed?"
+        ]
+      },
+      {
+        "id": "safety_review",
+        "label": "Acute safety concerns and established clinical procedures have been reviewed without declaring safety status",
+        "required_evidence_source": "clinician confirmation",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "Are there acute safety concerns requiring established clinical procedures before approach selection?"
+        ]
+      },
+      {
+        "id": "medical_review",
+        "label": "Medical/referral considerations have been considered as potentially concurrent, not only after psychological explanations fail",
+        "required_evidence_source": "clinician confirmation",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "Are medical, medication, sleep, substance, pain, neurological, or referral considerations relevant now?"
+        ]
+      },
+      {
+        "id": "scope_setting_resources",
+        "label": "Clinician competence, supervision, setting, and resource availability fit this approach",
+        "required_evidence_source": "clinician confirmation",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "Is this approach within competence, supervision, setting, and available resources?"
+        ]
+      }
+    ],
+    "approach_specific_prerequisites": [
+      {
+        "id": "collaborative_goal",
+        "label": "A collaborative target or purpose for this approach is identified",
+        "required_evidence_source": "intake fact",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "What specific target, purpose, or goal would this approach address?"
+        ]
+      },
+      {
+        "id": "relational_safety_clarified",
+        "label": "Relational safety, coercion, and consent/confidentiality boundaries are clarified",
+        "required_evidence_source": "clinician confirmation",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "Are relational safety, coercion, consent, and confidentiality boundaries sufficiently clear for systemic work?"
+        ]
+      }
+    ],
+    "conditional_considerations": [
+      {
+        "id": "client_preference_visibility",
+        "label": "Client preference, informed choice, culture, and feasibility should remain visible in the plan.",
+        "evidence_sources": [
+          "client preference",
+          "clinician confirmation"
+        ],
+        "clarification_questions": [
+          "How does the client describe preference, fit, culture, feasibility, or concerns?"
+        ]
+      },
+      {
+        "id": "coexisting_medical_psychological",
+        "label": "Medical and psychological contributors may coexist and should be considered concurrently.",
+        "evidence_sources": [
+          "domain activation",
+          "intake fact"
+        ],
+        "clarification_questions": [
+          "What medical and psychological/contextual contributors should be tracked side by side?"
+        ]
+      }
+    ],
+    "priority_shifting_or_referral_conditions": [
+      {
+        "id": "acute_safety_priority",
+        "label": "Acute safety concerns require established clinical procedures before ordinary approach selection; the app must not declare the person safe or unsafe.",
+        "status_if_present": "defer_while_priority_needs_are_addressed",
+        "evidence_sources": [
+          "clinician confirmation",
+          "intake fact"
+        ],
+        "clarification_questions": [
+          "Do current risk details require established clinical procedures now?"
+        ]
+      },
+      {
+        "id": "urgent_medical_priority",
+        "label": "Urgent medical/referral concerns may require consultation, referral, or emergency procedures concurrent with or before psychosocial work.",
+        "status_if_present": "consultation_or_referral_required",
+        "evidence_sources": [
+          "domain activation",
+          "clinician confirmation",
+          "intake fact"
+        ],
+        "clarification_questions": [
+          "Are urgent medical, neurological, medication, substance, or severe sleep concerns present?"
+        ]
+      }
+    ],
+    "scope_or_setting_requirements": [
+      "Use within documented competence, supervision, role, setting, and resource availability.",
+      "Do not treat this placeholder as a full protocol or as authorization for out-of-scope care."
+    ],
+    "application_guidance": "Use only as clinician-reviewed decision support linked to source facts, domain activations, confirmations, and client preference.",
+    "example_questions": [
+      "What evidence supports considering this approach now?",
+      "What information is still missing before deciding?"
+    ],
+    "example_exercises": [
+      "collaborative option review",
+      "source-fact-linked plan draft"
+    ],
+    "cautions": [
+      "Do not diagnose, prescribe, infer causality, or treat missing information as a contraindication by itself."
+    ],
+    "contraindication_or_referral_considerations": [
+      "Priority-shifting conditions should trigger clinician review, consultation, referral, or established procedures as clinically indicated."
+    ],
+    "setting_limitations": [
+      "Prototype placeholder; qualified clinical review pending."
+    ],
+    "clinician_scope_notes": "Use within clinician competence, supervision, setting, and resource limits.",
+    "evidence_source_placeholder": "Evidence/source field intentionally pending qualified clinical review; no citation invented.",
+    "clinical_review_status": "pending qualified clinical review",
     "clinician_review_required": true
   },
   {
-    "approach_name": "Case-management and environmental interventions",
-    "description": "Placeholder entry for addressing access barriers, resource needs, care coordination, advocacy, and environmental stressors.",
-    "target_domains": ["Environmental and social conditions", "Allostatic load", "Executive functioning", "Medical and physiological contributors"],
-    "target_processes": ["resource linkage", "access barriers", "care coordination", "load reduction"],
-    "treatment_stage": "Often early or concurrent when environmental barriers are active.",
-    "client_goals": ["reduce practical barriers", "increase access to support", "coordinate care"],
-    "prerequisites": ["client consent for referrals or coordination", "local resource availability clarified"],
-    "application_guidance": "Prioritize concrete barriers that limit safety, care access, sleep, nutrition, housing, or appointment follow-through.",
-    "example_questions": ["What practical barrier would reduce the most stress if addressed?", "What resources are already available?"],
-    "example_exercises": ["resource map", "appointment support plan", "barrier-priority list"],
-    "cautions": ["Do not individualize distress caused by structural barriers."],
-    "contraindication_or_referral_considerations": ["Urgent housing, food, medical, legal, or safety needs may require specialized referral or emergency procedures."],
-    "setting_limitations": ["Depends on local resources, role, agency policy, and scope."],
-    "clinician_scope_notes": "Follow agency policy, consent rules, and scope for advocacy or coordination.",
-    "evidence_source_placeholder": "Evidence/source field intentionally pending human clinical review; no citation invented.",
+    "approach_name": "Case-management/environmental interventions",
+    "description": "Placeholder entry for Case-management/environmental interventions; pending qualified clinical review and not a diagnosis-specific recommendation.",
+    "target_domains": [
+      "Environmental and social conditions",
+      "Allostatic load",
+      "Executive functioning",
+      "Medical and physiological contributors"
+    ],
+    "target_processes": [
+      "resource",
+      "access",
+      "barrier",
+      "care coordination"
+    ],
+    "treatment_stage": "Often early or concurrent",
+    "client_goals": [
+      "increase coping options",
+      "clarify priorities",
+      "reduce avoidant costs",
+      "coordinate safe care",
+      "reconnect with values"
+    ],
+    "universal_review_gates": [
+      {
+        "id": "informed_choice",
+        "label": "Client preference and informed choice have been discussed",
+        "required_evidence_source": "client preference",
+        "hard_prerequisite": false,
+        "clarification_questions": [
+          "What options, preferences, concerns, or declines has the client expressed?"
+        ]
+      },
+      {
+        "id": "safety_review",
+        "label": "Acute safety concerns and established clinical procedures have been reviewed without declaring safety status",
+        "required_evidence_source": "clinician confirmation",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "Are there acute safety concerns requiring established clinical procedures before approach selection?"
+        ]
+      },
+      {
+        "id": "medical_review",
+        "label": "Medical/referral considerations have been considered as potentially concurrent, not only after psychological explanations fail",
+        "required_evidence_source": "clinician confirmation",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "Are medical, medication, sleep, substance, pain, neurological, or referral considerations relevant now?"
+        ]
+      },
+      {
+        "id": "scope_setting_resources",
+        "label": "Clinician competence, supervision, setting, and resource availability fit this approach",
+        "required_evidence_source": "clinician confirmation",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "Is this approach within competence, supervision, setting, and available resources?"
+        ]
+      }
+    ],
+    "approach_specific_prerequisites": [
+      {
+        "id": "collaborative_goal",
+        "label": "A collaborative target or purpose for this approach is identified",
+        "required_evidence_source": "intake fact",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "What specific target, purpose, or goal would this approach address?"
+        ]
+      }
+    ],
+    "conditional_considerations": [
+      {
+        "id": "client_preference_visibility",
+        "label": "Client preference, informed choice, culture, and feasibility should remain visible in the plan.",
+        "evidence_sources": [
+          "client preference",
+          "clinician confirmation"
+        ],
+        "clarification_questions": [
+          "How does the client describe preference, fit, culture, feasibility, or concerns?"
+        ]
+      },
+      {
+        "id": "coexisting_medical_psychological",
+        "label": "Medical and psychological contributors may coexist and should be considered concurrently.",
+        "evidence_sources": [
+          "domain activation",
+          "intake fact"
+        ],
+        "clarification_questions": [
+          "What medical and psychological/contextual contributors should be tracked side by side?"
+        ]
+      }
+    ],
+    "priority_shifting_or_referral_conditions": [
+      {
+        "id": "acute_safety_priority",
+        "label": "Acute safety concerns require established clinical procedures before ordinary approach selection; the app must not declare the person safe or unsafe.",
+        "status_if_present": "defer_while_priority_needs_are_addressed",
+        "evidence_sources": [
+          "clinician confirmation",
+          "intake fact"
+        ],
+        "clarification_questions": [
+          "Do current risk details require established clinical procedures now?"
+        ]
+      },
+      {
+        "id": "urgent_medical_priority",
+        "label": "Urgent medical/referral concerns may require consultation, referral, or emergency procedures concurrent with or before psychosocial work.",
+        "status_if_present": "consultation_or_referral_required",
+        "evidence_sources": [
+          "domain activation",
+          "clinician confirmation",
+          "intake fact"
+        ],
+        "clarification_questions": [
+          "Are urgent medical, neurological, medication, substance, or severe sleep concerns present?"
+        ]
+      }
+    ],
+    "scope_or_setting_requirements": [
+      "Use within documented competence, supervision, role, setting, and resource availability.",
+      "Do not treat this placeholder as a full protocol or as authorization for out-of-scope care."
+    ],
+    "application_guidance": "Use only as clinician-reviewed decision support linked to source facts, domain activations, confirmations, and client preference.",
+    "example_questions": [
+      "What evidence supports considering this approach now?",
+      "What information is still missing before deciding?"
+    ],
+    "example_exercises": [
+      "collaborative option review",
+      "source-fact-linked plan draft"
+    ],
+    "cautions": [
+      "Do not diagnose, prescribe, infer causality, or treat missing information as a contraindication by itself."
+    ],
+    "contraindication_or_referral_considerations": [
+      "Priority-shifting conditions should trigger clinician review, consultation, referral, or established procedures as clinically indicated."
+    ],
+    "setting_limitations": [
+      "Prototype placeholder; qualified clinical review pending."
+    ],
+    "clinician_scope_notes": "Use within clinician competence, supervision, setting, and resource limits.",
+    "evidence_source_placeholder": "Evidence/source field intentionally pending qualified clinical review; no citation invented.",
+    "clinical_review_status": "pending qualified clinical review",
     "clinician_review_required": true
   },
   {
     "approach_name": "Medical consultation or referral",
-    "description": "Placeholder entry for prompting clarification, coordination, consultation, referral, or emergency procedures when medical/referral considerations are present.",
-    "target_domains": ["Medical and physiological contributors", "Nervous-system regulation", "Executive functioning", "Environmental and social conditions"],
-    "target_processes": ["medical history clarification", "care coordination", "red-flag review", "scope management"],
-    "treatment_stage": "Any stage when medical/referral considerations arise; may be referral-first if urgent.",
-    "client_goals": ["clarify medical context", "coordinate safe care", "address physical or neurological concerns"],
-    "prerequisites": ["clinician identifies relevant medical/referral considerations", "emergency procedures used when indicated"],
-    "application_guidance": "Use language such as: consider further assessment, clarify medical history, coordinate with a medical provider as clinically indicated.",
-    "example_questions": ["What recent medical, medication, sleep, substance, or neurological changes should be clarified?", "Is there an established medical provider to coordinate with?"],
-    "example_exercises": ["medical timeline for referral discussion", "questions-for-provider list"],
-    "cautions": ["Do not state that a symptom is medically caused or not medically caused."],
-    "contraindication_or_referral_considerations": ["Acute confusion, neurological symptoms, head injury, seizure-like events, severe/prolonged sleep loss, intoxication/withdrawal, infection/systemic illness, endocrine/metabolic concerns, sudden personality/functioning change, cognitive decline, or emergency risk may require urgent assessment or emergency procedures."],
-    "setting_limitations": ["Behavioral health decision-support placeholder; not medical diagnosis or medical advice."],
-    "clinician_scope_notes": "Remain within behavioral health scope and coordinate/refer as clinically indicated.",
-    "evidence_source_placeholder": "Evidence/source field intentionally pending human clinical review; no citation invented.",
+    "description": "Placeholder entry for Medical consultation or referral; pending qualified clinical review and not a diagnosis-specific recommendation.",
+    "target_domains": [
+      "Medical and physiological contributors",
+      "Nervous-system regulation",
+      "Executive functioning",
+      "Environmental and social conditions"
+    ],
+    "target_processes": [
+      "medical",
+      "referral",
+      "medication",
+      "sleep",
+      "pain",
+      "neurological"
+    ],
+    "treatment_stage": "Any stage; may be concurrent or priority-shifting",
+    "client_goals": [
+      "increase coping options",
+      "clarify priorities",
+      "reduce avoidant costs",
+      "coordinate safe care",
+      "reconnect with values"
+    ],
+    "universal_review_gates": [
+      {
+        "id": "informed_choice",
+        "label": "Client preference and informed choice have been discussed",
+        "required_evidence_source": "client preference",
+        "hard_prerequisite": false,
+        "clarification_questions": [
+          "What options, preferences, concerns, or declines has the client expressed?"
+        ]
+      },
+      {
+        "id": "safety_review",
+        "label": "Acute safety concerns and established clinical procedures have been reviewed without declaring safety status",
+        "required_evidence_source": "clinician confirmation",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "Are there acute safety concerns requiring established clinical procedures before approach selection?"
+        ]
+      },
+      {
+        "id": "scope_setting_resources",
+        "label": "Clinician competence, supervision, setting, and resource availability fit this approach",
+        "required_evidence_source": "clinician confirmation",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "Is this approach within competence, supervision, setting, and available resources?"
+        ]
+      }
+    ],
+    "approach_specific_prerequisites": [
+      {
+        "id": "medical_referral_reason",
+        "label": "A medical/referral consideration is present or needs clarification",
+        "required_evidence_source": "domain activation",
+        "hard_prerequisite": true,
+        "clarification_questions": [
+          "Which medical/referral consideration needs clarification or coordination?"
+        ]
+      }
+    ],
+    "conditional_considerations": [
+      {
+        "id": "client_preference_visibility",
+        "label": "Client preference, informed choice, culture, and feasibility should remain visible in the plan.",
+        "evidence_sources": [
+          "client preference",
+          "clinician confirmation"
+        ],
+        "clarification_questions": [
+          "How does the client describe preference, fit, culture, feasibility, or concerns?"
+        ]
+      },
+      {
+        "id": "coexisting_medical_psychological",
+        "label": "Medical and psychological contributors may coexist and should be considered concurrently.",
+        "evidence_sources": [
+          "domain activation",
+          "intake fact"
+        ],
+        "clarification_questions": [
+          "What medical and psychological/contextual contributors should be tracked side by side?"
+        ]
+      }
+    ],
+    "priority_shifting_or_referral_conditions": [
+      {
+        "id": "acute_safety_priority",
+        "label": "Acute safety concerns require established clinical procedures before ordinary approach selection; the app must not declare the person safe or unsafe.",
+        "status_if_present": "defer_while_priority_needs_are_addressed",
+        "evidence_sources": [
+          "clinician confirmation",
+          "intake fact"
+        ],
+        "clarification_questions": [
+          "Do current risk details require established clinical procedures now?"
+        ]
+      },
+      {
+        "id": "urgent_medical_priority",
+        "label": "Urgent medical/referral concerns may require consultation, referral, or emergency procedures concurrent with or before psychosocial work.",
+        "status_if_present": "consultation_or_referral_required",
+        "evidence_sources": [
+          "domain activation",
+          "clinician confirmation",
+          "intake fact"
+        ],
+        "clarification_questions": [
+          "Are urgent medical, neurological, medication, substance, or severe sleep concerns present?"
+        ]
+      }
+    ],
+    "scope_or_setting_requirements": [
+      "Use within documented competence, supervision, role, setting, and resource availability.",
+      "Do not treat this placeholder as a full protocol or as authorization for out-of-scope care."
+    ],
+    "application_guidance": "Use only as clinician-reviewed decision support linked to source facts, domain activations, confirmations, and client preference.",
+    "example_questions": [
+      "What evidence supports considering this approach now?",
+      "What information is still missing before deciding?"
+    ],
+    "example_exercises": [
+      "collaborative option review",
+      "source-fact-linked plan draft"
+    ],
+    "cautions": [
+      "Do not diagnose, prescribe, infer causality, or treat missing information as a contraindication by itself."
+    ],
+    "contraindication_or_referral_considerations": [
+      "Priority-shifting conditions should trigger clinician review, consultation, referral, or established procedures as clinically indicated."
+    ],
+    "setting_limitations": [
+      "Prototype placeholder; qualified clinical review pending."
+    ],
+    "clinician_scope_notes": "Use within clinician competence, supervision, setting, and resource limits.",
+    "evidence_source_placeholder": "Evidence/source field intentionally pending qualified clinical review; no citation invented.",
+    "clinical_review_status": "pending qualified clinical review",
     "clinician_review_required": true
   }
 ]

@@ -10,7 +10,11 @@ REQUIRED_FIELDS = {
     "target_processes",
     "treatment_stage",
     "client_goals",
-    "prerequisites",
+    "universal_review_gates",
+    "approach_specific_prerequisites",
+    "conditional_considerations",
+    "priority_shifting_or_referral_conditions",
+    "scope_or_setting_requirements",
     "application_guidance",
     "example_questions",
     "example_exercises",
@@ -19,21 +23,31 @@ REQUIRED_FIELDS = {
     "setting_limitations",
     "clinician_scope_notes",
     "evidence_source_placeholder",
+    "clinical_review_status",
     "clinician_review_required",
 }
 
 EXPECTED_APPROACHES = {
-    "DBT-informed interventions",
-    "Mentalization-Based Treatment",
+    "DBT-informed skills",
+    "Comprehensive DBT",
+    "Mentalization-Based Treatment or MBT-informed work",
     "CBT",
     "ACT",
     "Behavioral Activation",
     "Motivational Interviewing",
     "Attachment-informed therapy",
     "Trauma-informed stabilization",
+    "Trauma-focused psychotherapy",
     "Family or systemic approaches",
-    "Case-management and environmental interventions",
+    "Case-management/environmental interventions",
     "Medical consultation or referral",
+}
+
+FRAMEWORK_KEYS = {
+    "universal_review_gates",
+    "approach_specific_prerequisites",
+    "conditional_considerations",
+    "priority_shifting_or_referral_conditions",
 }
 
 
@@ -49,13 +63,24 @@ def test_intervention_library_contains_required_placeholder_approaches():
     assert names == EXPECTED_APPROACHES
 
 
-def test_intervention_library_entries_have_required_fields_and_review_placeholders():
+def test_intervention_library_entries_have_transparent_prerequisite_framework():
     for entry in load_library():
         assert set(entry) == REQUIRED_FIELDS
+        assert FRAMEWORK_KEYS.issubset(entry)
         assert entry["clinician_review_required"] is True
-        assert "pending human clinical review" in entry["evidence_source_placeholder"]
+        assert entry["clinical_review_status"] == "pending qualified clinical review"
+        assert "pending qualified clinical review" in entry["evidence_source_placeholder"]
         assert "citation invented" in entry["evidence_source_placeholder"]
         assert entry["target_domains"]
         assert entry["target_processes"]
-        assert entry["cautions"]
-        assert entry["contraindication_or_referral_considerations"]
+        assert entry["scope_or_setting_requirements"]
+        assert entry["conditional_considerations"]
+        assert entry["priority_shifting_or_referral_conditions"]
+        for prerequisite in entry["universal_review_gates"] + entry["approach_specific_prerequisites"]:
+            assert prerequisite["required_evidence_source"] in {
+                "intake fact",
+                "domain activation",
+                "clinician confirmation",
+                "client preference",
+            }
+            assert prerequisite["clarification_questions"]
