@@ -66,3 +66,36 @@ def test_medical_considerations_use_cautious_language_without_causality_claim():
     assert "Clarify medical history." in panel
     assert "Coordinate with a medical provider as clinically indicated." in panel
     assert "is medically caused" not in panel
+
+
+def test_negated_medical_indicators_do_not_activate_medical_domain():
+    intake = Intake(
+        sleep="No severe sleep loss reported.",
+        medications="No medication initiation, withdrawal, or dosage changes reported.",
+        substance_use="No substance use, intoxication, or withdrawal concern reported.",
+        physical_neurological_symptoms="No head injury, seizure-like events, or neurological symptoms reported.",
+        recent_medical_changes="No recent medical changes reported.",
+    )
+
+    assert ProjectLayerDomain.MEDICAL_PHYSIOLOGICAL not in domains_for(intake)
+
+
+def test_medical_and_psychological_possibilities_can_coexist_without_diagnosis():
+    intake = Intake(
+        presenting_concerns="Reports worry, shame, and intense emotion after stress.",
+        medications="Recent medication initiation and dosage change.",
+        physical_neurological_symptoms="Chronic pain and unexplained fatigue.",
+    )
+    activations = map_intake_to_domains(intake)
+    activated_domains = {activation.domain for activation in activations}
+    all_text = " ".join(
+        [activation.caution for activation in activations]
+        + [fact for activation in activations for fact in activation.reported_facts]
+    ).lower()
+
+    assert ProjectLayerDomain.MEDICAL_PHYSIOLOGICAL in activated_domains
+    assert ProjectLayerDomain.MEANING_COGNITION in activated_domains
+    assert ProjectLayerDomain.EMOTION_REGULATION in activated_domains
+    assert "diagnosis" in all_text
+    assert "medically caused" not in " ".join(medical_considerations(activations)).lower()
+
